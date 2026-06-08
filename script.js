@@ -34,7 +34,6 @@ enterButton.addEventListener("click", () => {
         midway.classList.add("midway-reveal");
 
         ambienceAudio.play().catch(() => {});
-
         window.scrollTo(0, 0);
     }, 3000);
 });

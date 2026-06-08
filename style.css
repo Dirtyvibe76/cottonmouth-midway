@@ -1,172 +1,133 @@
 body{
+    margin:0;
+    padding:0;
     background:black;
     color:white;
     font-family:Georgia, serif;
-    margin:0;
-    padding:0;
     overflow-x:hidden;
 }
 
-/* CRT projector effect */
-
 .projector{
     position:fixed;
-    width:100%;
-    height:100%;
+    inset:0;
     pointer-events:none;
-    opacity:.05;
+    opacity:.06;
     z-index:9999;
-
-    background:
-    repeating-linear-gradient(
+    background:repeating-linear-gradient(
         to bottom,
         transparent 0px,
         transparent 2px,
         white 3px,
         transparent 4px
     );
+    animation:flicker .15s infinite;
 }
 
-/* Landing Screen */
-
-.landing{
+#landing{
+    width:100vw;
     height:100vh;
-
+    background-image:linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.55)), url("assets/Images/websitebackgroundclosed.png");
+    background-size:cover;
+    background-position:center;
     display:flex;
-    flex-direction:column;
     justify-content:center;
     align-items:center;
-
     text-align:center;
 }
 
-.landing h1{
+.landing-content h1{
     font-size:4rem;
     color:orange;
     text-shadow:0 0 20px red;
-    margin-bottom:20px;
 }
 
-.landing p{
+.landing-content p{
     font-size:1.5rem;
-    margin-bottom:40px;
+    font-weight:bold;
 }
 
-.landing button{
+button{
     background:darkred;
     color:white;
-
     border:2px solid red;
-
-    padding:18px 40px;
-
+    padding:18px 45px;
     font-size:1.2rem;
     font-weight:bold;
-
     cursor:pointer;
-
-    transition:.3s;
 }
 
-.landing button:hover{
+button:hover{
     background:red;
     transform:scale(1.05);
 }
-
-/* Gate Flash */
-
-.gate-flash{
-    display:none;
-
-    height:100vh;
-
-    justify-content:center;
-    align-items:center;
-
-    font-size:5rem;
-    font-weight:bold;
-
-    color:red;
-    text-shadow:
-        0 0 10px orange,
-        0 0 30px red,
-        0 0 60px darkred;
-}
-
-/* Hidden Content */
 
 .hidden{
     display:none;
 }
 
-/* Main Midway */
-
-header{
-    text-align:center;
-    padding-top:100px;
-    padding-bottom:100px;
+.gate-flash{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:9998;
+    background:rgba(0,0,0,.9);
+    color:red;
+    justify-content:center;
+    align-items:center;
+    font-size:5rem;
+    font-weight:bold;
+    text-shadow:0 0 20px orange, 0 0 40px red;
 }
 
-header h1{
-    font-size:4rem;
-    color:orange;
-    text-shadow:0 0 20px red;
+#midway{
+    min-height:100vh;
+    background-image:linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.65)), url("assets/Images/websitebackgroundopen.png");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    padding-top:40px;
 }
-
-.tagline{
-    font-size:1.5rem;
-}
-
-/* Midway Map */
 
 .midway-map{
     display:flex;
     justify-content:center;
-    gap:40px;
+    gap:30px;
     flex-wrap:wrap;
-
-    padding:50px;
+    padding:30px;
 }
 
 .tent{
     width:150px;
-    height:150px;
-
+    height:90px;
     border:2px solid darkred;
-
+    background:rgba(0,0,0,.65);
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-
-    text-decoration:none;
     color:white;
-
-    font-size:3rem;
-
+    text-decoration:none;
+    font-size:2rem;
     transition:.3s;
 }
 
 .tent:hover{
     background:darkred;
-    transform:scale(1.1);
+    transform:scale(1.08);
 }
 
 .tent span{
-    font-size:1rem;
-    margin-top:10px;
+    font-size:.9rem;
+    margin-top:8px;
+    font-weight:bold;
 }
-
-/* Content Sections */
 
 section{
     max-width:900px;
-
-    margin:auto;
-
-    padding:80px 20px;
-
-    border-top:1px solid #333;
+    margin:80px auto;
+    padding:40px 25px;
+    background:rgba(0,0,0,.65);
+    border:1px solid #3a0000;
 }
 
 h2{
@@ -174,25 +135,8 @@ h2{
     text-shadow:0 0 10px red;
 }
 
-/* Scroll Animation Support */
-
-section{
-    opacity:1;
-}
-
-/* Optional Flicker */
-
-@keyframes flicker{
-    0%{opacity:.05;}
-    50%{opacity:.08;}
-    100%{opacity:.05;}
-}
-
-.projector{
-    animation:flicker .15s infinite;
-}
 .fade-out{
-    animation:fadeOut .8s forwards;
+    animation:fadeOut 1s forwards;
 }
 
 .gate-shake{
@@ -204,51 +148,31 @@ section{
 }
 
 @keyframes fadeOut{
-    from{
-        opacity:1;
-    }
-    to{
-        opacity:0;
-    }
+    from{opacity:1;}
+    to{opacity:0;}
 }
 
 @keyframes gateShake{
-    0%{
-        transform:translate(0,0);
-    }
-    25%{
-        transform:translate(4px,-2px);
-    }
-    50%{
-        transform:translate(-4px,2px);
-    }
-    75%{
-        transform:translate(2px,4px);
-    }
-    100%{
-        transform:translate(0,0);
-    }
+    0%{transform:translate(0,0);}
+    25%{transform:translate(4px,-2px);}
+    50%{transform:translate(-4px,2px);}
+    75%{transform:translate(2px,4px);}
+    100%{transform:translate(0,0);}
 }
 
 @keyframes flashText{
-    0%{
-        opacity:1;
-    }
-    50%{
-        opacity:.4;
-    }
-    100%{
-        opacity:1;
-    }
+    0%{opacity:1;}
+    50%{opacity:.45;}
+    100%{opacity:1;}
 }
 
 @keyframes midwayReveal{
-    from{
-        opacity:0;
-        transform:scale(.95);
-    }
-    to{
-        opacity:1;
-        transform:scale(1);
-    }
+    from{opacity:0; transform:scale(.97);}
+    to{opacity:1; transform:scale(1);}
+}
+
+@keyframes flicker{
+    0%{opacity:.05;}
+    50%{opacity:.09;}
+    100%{opacity:.05;}
 }
