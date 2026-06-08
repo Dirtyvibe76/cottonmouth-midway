@@ -1,21 +1,27 @@
-html, body{
-    margin:0;
-    padding:0;
-    width:100%;
-    min-height:100%;
+/* =========================
+   GLOBAL
+========================= */
+
+body{
     background:black;
     color:white;
     font-family:Georgia, serif;
+    margin:0;
+    padding:0;
     overflow-x:hidden;
 }
+
+/* CRT projector lines */
 
 .projector{
     position:fixed;
     inset:0;
     pointer-events:none;
-    opacity:.06;
+    opacity:.05;
     z-index:9999;
-    background:repeating-linear-gradient(
+
+    background:
+    repeating-linear-gradient(
         to bottom,
         transparent 0px,
         transparent 2px,
@@ -24,44 +30,59 @@ html, body{
     );
 }
 
+/* =========================
+   HIDDEN CLASS
+========================= */
+
 .hidden{
-    display:none !important;
+    display:none;
 }
 
-/* LANDING */
+/* =========================
+   LANDING PAGE
+========================= */
 
 #landing{
-    width:100vw;
-    height:100vh;
     position:relative;
+    min-height:100vh;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     overflow:hidden;
-    background:black;
 }
+
+/* dark glow behind image */
 
 #landing::before{
     content:"";
     position:absolute;
     inset:0;
-    background-image:url("assets/images/websitebackgroundclosed.png");
+
+    background:url("assets/images/websitebackgroundclosed.png");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-    filter:blur(20px) brightness(.35);
-    transform:scale(1.15);
+
+    filter:blur(15px) brightness(.35);
+    transform:scale(1.1);
+
     z-index:0;
 }
+
+/* main image */
 
 #landing::after{
     content:"";
     position:absolute;
     inset:0;
-    background-image:url("assets/images/websitebackgroundclosed.png");
+
+    background:url("assets/images/websitebackgroundclosed.png");
     background-size:contain;
     background-position:center;
     background-repeat:no-repeat;
+
     z-index:1;
 }
 
@@ -72,26 +93,39 @@ html, body{
 }
 
 .landing-content h1{
-    font-size:5rem;
     color:orange;
-    text-shadow:0 0 15px red, 0 0 35px red;
+    font-size:5rem;
+
+    text-shadow:
+    0 0 15px red,
+    0 0 35px red;
 }
 
 .landing-content p{
     font-size:1.6rem;
     font-weight:bold;
-    text-shadow:0 0 15px black;
+
+    text-shadow:
+    0 0 10px black;
 }
 
 #enterButton{
     background:#990000;
     color:white;
+
     border:2px solid red;
+
     padding:16px 45px;
+
     font-size:1.2rem;
     font-weight:bold;
+
     cursor:pointer;
-    box-shadow:0 0 15px red;
+
+    box-shadow:
+    0 0 15px red;
+
+    transition:.3s;
 }
 
 #enterButton:hover{
@@ -99,21 +133,32 @@ html, body{
     transform:scale(1.05);
 }
 
-/* GATE FLASH */
+/* =========================
+   GATE FLASH
+========================= */
 
 #gateFlash{
     display:none;
+
     position:fixed;
     inset:0;
+
     background:black;
+
     z-index:9998;
+
     justify-content:center;
     align-items:center;
+
     color:orange;
     font-size:5rem;
     font-weight:bold;
+
     text-align:center;
-    text-shadow:0 0 20px red, 0 0 50px red;
+
+    text-shadow:
+    0 0 20px red,
+    0 0 50px red;
 }
 
 #gateFlash.show{
@@ -136,84 +181,117 @@ html, body{
     to{opacity:0;}
 }
 
-/* MIDWAY */
+/* =========================
+   MIDWAY PAGE
+========================= */
 
 #midway{
     min-height:100vh;
-    background:black;
-    background-image:
-        linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.75)),
-        url("assets/images/websitebackgroundopen.png");
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.75)
+    ),
+    url("assets/images/websitebackgroundopen.png");
+
     background-size:cover;
     background-position:center top;
     background-repeat:no-repeat;
     background-attachment:fixed;
+
     padding-top:40px;
     padding-bottom:100px;
 }
 
+/* =========================
+   HEADER
+========================= */
+
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    color:orange;
+    font-size:4rem;
+
+    text-shadow:
+    0 0 15px red,
+    0 0 35px red;
+}
+
+.tagline{
+    font-size:1.4rem;
+}
+
+/* =========================
+   MENU BOXES
+========================= */
+
 .midway-map{
     display:flex;
     justify-content:center;
-    gap:28px;
+    gap:20px;
     flex-wrap:wrap;
-    padding:35px;
+
+    margin-top:60px;
+    margin-bottom:80px;
 }
 
 .tent{
-    width:150px;
-    height:95px;
-    border:2px solid darkred;
-    background:rgba(0,0,0,.7);
+    width:110px;
+    height:90px;
+
+    border:1px solid red;
+
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    color:white;
+
     text-decoration:none;
-    font-size:2rem;
+    color:white;
+
     transition:.3s;
 }
 
 .tent:hover{
-    background:darkred;
+    background:rgba(120,0,0,.5);
     transform:scale(1.08);
-    box-shadow:0 0 20px red;
 }
 
 .tent span{
-    font-size:.9rem;
     margin-top:8px;
-    font-weight:bold;
+    font-size:.8rem;
 }
 
-.content-section{
+/* =========================
+   CONTENT SECTIONS
+========================= */
+
+section{
     max-width:900px;
-    margin:70px auto;
-    padding:35px;
-    background:rgba(0,0,0,.72);
-    border:1px solid #3a0000;
+
+    margin:80px auto;
+
+    padding:25px;
+
+    border:1px solid rgba(255,0,0,.15);
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(3px);
 }
 
-.content-section h2{
+section h2{
     color:orange;
-    text-shadow:0 0 10px red;
+
+    text-shadow:
+    0 0 10px red;
 }
 
-/* MOBILE */
-
-@media(max-width:768px){
-    .landing-content h1{
-        font-size:2.5rem;
-    }
-
-    #gateFlash{
-        font-size:2.2rem;
-        padding:20px;
-    }
-
-    .tent{
-        width:130px;
-        height:85px;
-    }
+section p{
+    line-height:1.6;
 }
