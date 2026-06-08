@@ -191,3 +191,64 @@ section{
 .projector{
     animation:flicker .15s infinite;
 }
+.fade-out{
+    animation:fadeOut .8s forwards;
+}
+
+.gate-shake{
+    animation:gateShake .12s infinite, flashText .4s infinite;
+}
+
+.midway-reveal{
+    animation:midwayReveal 1.5s ease-out forwards;
+}
+
+@keyframes fadeOut{
+    from{
+        opacity:1;
+    }
+    to{
+        opacity:0;
+    }
+}
+
+@keyframes gateShake{
+    0%{
+        transform:translate(0,0);
+    }
+    25%{
+        transform:translate(4px,-2px);
+    }
+    50%{
+        transform:translate(-4px,2px);
+    }
+    75%{
+        transform:translate(2px,4px);
+    }
+    100%{
+        transform:translate(0,0);
+    }
+}
+
+@keyframes flashText{
+    0%{
+        opacity:1;
+    }
+    50%{
+        opacity:.4;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes midwayReveal{
+    from{
+        opacity:0;
+        transform:scale(.95);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
