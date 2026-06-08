@@ -276,44 +276,6 @@ html, body{
     height:4%;
 }
 
-/* MOBILE */
-
-@media(max-width:768px){
-    .landing-content h1{
-        font-size:2.2rem;
-    }
-
-    .tagline{
-        font-size:1.1rem;
-    }
-
-    .warning-box{
-        max-width:85%;
-        padding:12px 15px;
-    }
-
-    .warning-box h3{
-        font-size:.9rem;
-    }
-
-    .warning-box p{
-        font-size:.82rem;
-    }
-
-    #enterButton{
-        padding:12px 30px;
-        font-size:1rem;
-    }
-
-    #gateFlash{
-        font-size:2.4rem;
-        padding:20px;
-    }
-
-    .sign-link{
-        display:none;
-    }
-}
 /* SUBPAGES */
 
 .subpage{
@@ -374,4 +336,139 @@ html, body{
 .subpage-card p{
     font-size:1.1rem;
     line-height:1.6;
+}
+
+/* MUSIC PAGE */
+
+.music-page{
+    gap:30px;
+}
+
+.music-grid{
+    width:90%;
+    max-width:1400px;
+    margin:30px auto 0 auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+    gap:30px;
+}
+
+.album-card{
+    border:2px solid rgba(255,60,0,.55);
+    background:rgba(0,0,0,.78);
+    padding:28px;
+    text-align:center;
+    box-shadow:
+        0 0 18px rgba(255,0,0,.35),
+        inset 0 0 18px rgba(255,80,0,.1);
+}
+
+.album-card h2{
+    color:orange;
+    font-size:2rem;
+    margin-top:0;
+    text-shadow:0 0 10px red;
+}
+
+.album-card p{
+    line-height:1.5;
+}
+
+.album-card ul{
+    text-align:left;
+    line-height:1.8;
+    margin:20px auto;
+    max-width:360px;
+}
+
+.music-links{
+    margin-top:20px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+}
+
+.music-links a,
+.listen-button{
+    color:white;
+    text-decoration:none;
+    background:#990000;
+    border:1px solid red;
+    padding:10px 14px;
+    font-weight:bold;
+    box-shadow:0 0 10px rgba(255,0,0,.45);
+    display:inline-block;
+}
+
+.music-links a:hover,
+.listen-button:hover{
+    background:red;
+}
+
+.featured-track{
+    width:90%;
+    max-width:1000px;
+    margin:60px auto 0 auto;
+    padding:30px;
+    text-align:center;
+    background:rgba(0,0,0,.75);
+    border:2px solid rgba(255,60,0,.55);
+    box-shadow:0 0 18px rgba(255,0,0,.35);
+}
+
+.featured-track h2{
+    color:orange;
+    text-shadow:0 0 10px red;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+    .landing-content h1{
+        font-size:2.2rem;
+    }
+
+    .tagline{
+        font-size:1.1rem;
+    }
+
+    .warning-box{
+        max-width:85%;
+        padding:12px 15px;
+    }
+
+    .warning-box h3{
+        font-size:.9rem;
+    }
+
+    .warning-box p{
+        font-size:.82rem;
+    }
+
+    #enterButton{
+        padding:12px 30px;
+        font-size:1rem;
+    }
+
+    #gateFlash{
+        font-size:2.4rem;
+        padding:20px;
+    }
+
+    .sign-link{
+        display:none;
+    }
+
+    .subpage-card h1{
+        font-size:2.2rem;
+    }
+
+    .subpage-card{
+        padding:25px;
+    }
+
+    .music-grid{
+        grid-template-columns:1fr;
+    }
 }
