@@ -7,7 +7,7 @@ const gateAudio = new Audio("assets/audio/openthegates.wav");
 
 const ambienceAudio = new Audio("assets/audio/background.wav");
 ambienceAudio.loop = true;
-ambienceAudio.volume = 0.15;
+ambienceAudio.volume = 0.25;
 
 enterButton.addEventListener("click", () => {
     gateAudio.currentTime = 0;
