@@ -177,7 +177,7 @@ html, body{
     z-index:1;
 }
 
-/* CLICKABLE WOOD SIGN HOTSPOTS */
+/* CLICKABLE WOOD SIGN HOTSPOTS - VISIBLE FOR ALIGNMENT */
 
 #signMenu{
     position:absolute;
@@ -191,56 +191,57 @@ html, body{
     display:block;
     pointer-events:auto;
     cursor:pointer;
-    border:2px solid transparent;
-    transition:.25s;
-}
 
-.sign-link:hover{
-    border:2px solid rgba(255,80,0,.9);
+    border:2px solid rgba(255,80,0,.95);
     box-shadow:0 0 20px red, 0 0 35px orange;
     background:rgba(255,0,0,.08);
 }
 
-/* These are positioned for the right-side wooden sign */
+/* BIG TOP */
 .bigtop-link{
-    top:44.5%;
-    right:12.3%;
-    width:11.5%;
-    height:4.5%;
-}
-
-.funhouse-link{
-    top:50.3%;
-    right:11.8%;
-    width:12.3%;
-    height:4.5%;
-}
-
-.games-link{
-    top:56.2%;
-    right:11.5%;
+    top:49.5%;
+    right:9.8%;
     width:12.5%;
-    height:4.5%;
+    height:4.6%;
 }
 
+/* FUNHOUSE */
+.funhouse-link{
+    top:55.2%;
+    right:9.4%;
+    width:13.2%;
+    height:4.6%;
+}
+
+/* GAMES */
+.games-link{
+    top:61.1%;
+    right:9.2%;
+    width:12.8%;
+    height:4.6%;
+}
+
+/* MUSIC TENT */
 .music-link{
-    top:62.3%;
-    right:10.8%;
-    width:13.5%;
-    height:4.7%;
-}
-
-.freakshow-link{
-    top:68.6%;
-    right:10.5%;
-    width:14%;
+    top:66.9%;
+    right:8.7%;
+    width:14.2%;
     height:4.8%;
 }
 
+/* FREAK SHOW */
+.freakshow-link{
+    top:73%;
+    right:8.3%;
+    width:15%;
+    height:4.8%;
+}
+
+/* GALLERY / BOTTOM SIGN */
 .gallery-link{
-    top:74.8%;
-    right:9.7%;
-    width:15.5%;
+    top:79.2%;
+    right:7.8%;
+    width:16%;
     height:5%;
 }
 
