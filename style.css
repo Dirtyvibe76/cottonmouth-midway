@@ -314,3 +314,64 @@ html, body{
         display:none;
     }
 }
+/* SUBPAGES */
+
+.subpage{
+    min-height:100vh;
+    background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.9)),
+        url("assets/images/websitebackgroundopen.png");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.subpage-wrap{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+.back-button{
+    color:#ffcc66;
+    text-decoration:none;
+    font-weight:bold;
+    margin-bottom:25px;
+    text-shadow:0 0 10px red;
+}
+
+.back-button:hover{
+    color:white;
+}
+
+.subpage-card{
+    max-width:850px;
+    padding:40px;
+    background:rgba(0,0,0,.75);
+    border:2px solid rgba(255,60,0,.6);
+    box-shadow:
+        0 0 20px rgba(255,0,0,.45),
+        inset 0 0 20px rgba(255,80,0,.12);
+    text-align:center;
+}
+
+.subpage-card h1{
+    color:orange;
+    font-size:3.5rem;
+    margin-top:0;
+    text-shadow:0 0 15px red, 0 0 35px red;
+}
+
+.subpage-tagline{
+    color:#ffcc66;
+    font-size:1.4rem;
+    font-weight:bold;
+}
+
+.subpage-card p{
+    font-size:1.1rem;
+    line-height:1.6;
+}
