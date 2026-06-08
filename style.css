@@ -192,9 +192,14 @@ html, body{
     pointer-events:auto;
     cursor:pointer;
 
-    border:2px solid rgba(255,80,0,.95);
-    box-shadow:0 0 20px red, 0 0 35px orange;
-    background:rgba(255,0,0,.08);
+    border:none;
+    background:transparent;
+    box-shadow:none;
+}
+
+.sign-link:hover{
+    border:none;
+    background:rgba(255,80,0,.08);
 }
 
 /* BIG TOP */
