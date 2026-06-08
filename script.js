@@ -1,25 +1,23 @@
 const enterButton = document.getElementById("enterButton");
 const landing = document.getElementById("landing");
-const gateFlash = document.getElementById("gateFlash");
 const midway = document.getElementById("midway");
+const gateFlash = document.getElementById("gateFlash");
+
+const gateAudio = new Audio("assets/audio/openthegates.wav");
 
 enterButton.addEventListener("click", () => {
-  landing.classList.add("fade-out");
 
-  setTimeout(() => {
-    landing.style.display = "none";
-    gateFlash.style.display = "flex";
-    gateFlash.classList.add("gate-shake");
-  }, 800);
+    gateFlash.classList.add("active");
 
-  setTimeout(() => {
-    gateFlash.textContent = "WELCOME TO THE MIDWAY";
-  }, 1800);
+    gateAudio.play();
 
-  setTimeout(() => {
-    gateFlash.style.display = "none";
-    midway.classList.remove("hidden");
-    midway.classList.add("midway-reveal");
-    window.scrollTo(0, 0);
-  }, 3000);
+    setTimeout(() => {
+        landing.style.display = "none";
+        midway.classList.remove("hidden");
+    }, 1500);
+
+    setTimeout(() => {
+        gateFlash.classList.remove("active");
+    }, 2000);
+
 });
