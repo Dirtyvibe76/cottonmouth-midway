@@ -28,7 +28,7 @@
         Step beneath the canvas and listen closely.
         Every attraction has a sound.
         Every song pulls you deeper.
-        Welcome to the Cottonmouth Clown Music Tent.
+        Click an album poster on the wall to open its track list.
     </p>
 </div>
 
@@ -42,168 +42,209 @@
     <iframe width="100%" height="450" src="https://www.youtube.com/embed/0KG-_9plQZw" title="Family Don't Fold" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<div class="music-grid">
+<div class="album-wall">
+    <h2>THE ALBUM WALL</h2>
+    <p>Choose a poster. The Music Tent remembers.</p>
 
-    <div class="album-card">
+    <div class="album-wall-image">
+        <button class="poster-hotspot carnival-poster" data-album="carnivalPanel" aria-label="Open Carnival Of Chaos"></button>
+        <button class="poster-hotspot midway-poster" data-album="midwayPanel" aria-label="Open Midway Of Marvels"></button>
+    </div>
+</div>
+
+<div id="carnivalPanel" class="album-panel hidden">
+
+    <div class="album-panel-header">
         <h2>Carnival Of Chaos</h2>
-
-        <p>
-            The first invitation.
-            The beginning of the Cottonmouth Clown story.
-        </p>
-
-        <ul>
-            <li><a href="#clown-shoes-chaos">CLOWN SHOES & CHAOS (WHOOP WHOOP)</a></li>
-            <li><a href="#under-the-big-top">Under The Big Top</a></li>
-            <li><a href="#life-of-a-juggalo">Life Of A Juggalo</a></li>
-            <li><a href="#family-dont-fold">Family Don’t Fold</a></li>
-            <li><a href="#carnival-bloodline">Carnival Bloodline</a></li>
-            <li><a href="#laughing-at-the-world">LAUGHING AT THE WORLD</a></li>
-            <li><a href="#the-carnival-in-my-head">The Carnival In My Head</a></li>
-            <li><a href="#one-more-ride">ONE MORE RIDE (FREAK CUT)</a></li>
-            <li><a href="#two-voices-one-smile">Two Voices, One Smile</a></li>
-            <li><a href="#after-the-tents-fold">After The Tents Fold</a></li>
-        </ul>
+        <button class="close-album" data-close="carnivalPanel">Close Album</button>
     </div>
 
-    <div class="album-card">
+    <p>
+        The first invitation. The beginning of the Cottonmouth Clown story.
+    </p>
+
+    <ul class="album-track-list">
+        <li><a href="#carnival-full-album">Carnival Of Chaos — Full Album</a></li>
+        <li><a href="#clown-shoes-chaos">CLOWN SHOES & CHAOS (WHOOP WHOOP)</a></li>
+        <li><a href="#under-the-big-top">Under The Big Top</a></li>
+        <li><a href="#life-of-a-juggalo">Life Of A Juggalo</a></li>
+        <li><a href="#family-dont-fold">Family Don’t Fold</a></li>
+        <li><a href="#carnival-bloodline">Carnival Bloodline</a></li>
+        <li><a href="#laughing-at-the-world">LAUGHING AT THE WORLD</a></li>
+        <li><a href="#the-carnival-in-my-head">The Carnival In My Head</a></li>
+        <li><a href="#one-more-ride">ONE MORE RIDE (FREAK CUT)</a></li>
+        <li><a href="#two-voices-one-smile">Two Voices, One Smile</a></li>
+        <li><a href="#after-the-tents-fold">After The Tents Fold</a></li>
+    </ul>
+
+    <div class="featured-track album-featured" id="carnival-full-album">
+        <h2>CARNIVAL OF CHAOS — FULL ALBUM</h2>
+        <iframe width="100%" height="450" src="https://www.youtube.com/embed/mfHOSfSJEmg" title="Carnival Of Chaos Full Album" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="music-grid">
+        <div class="album-card" id="clown-shoes-chaos">
+            <h2>CLOWN SHOES & CHAOS</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/74osDbQUn3g" title="CLOWN SHOES & CHAOS" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="album-card" id="under-the-big-top">
+            <h2>Under The Big Top</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/NLBhhuYWrHM" title="Under The Big Top" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="album-card" id="life-of-a-juggalo">
+            <h2>Life Of A Juggalo</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/w0tKSJUhPjo" title="Life Of A Juggalo" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="album-card" id="family-dont-fold">
+            <h2>Family Don’t Fold</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/0KG-_9plQZw" title="Family Don't Fold" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="album-card" id="carnival-bloodline">
+            <h2>Carnival Bloodline</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/NVTXaYzEI2g" title="Carnival Bloodline" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="album-card" id="laughing-at-the-world">
+            <h2>LAUGHING AT THE WORLD</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/eerR72Rr6m4" title="LAUGHING AT THE WORLD" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="album-card" id="the-carnival-in-my-head">
+            <h2>The Carnival In My Head</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/4i_Nn3GOOcI" title="The Carnival In My Head" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="album-card" id="one-more-ride">
+            <h2>ONE MORE RIDE</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/L6qRhQHg9_c" title="ONE MORE RIDE" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="album-card" id="two-voices-one-smile">
+            <h2>Two Voices, One Smile</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/iSppOVDu8M4" title="Two Voices, One Smile" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="album-card" id="after-the-tents-fold">
+            <h2>After The Tents Fold</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/7TCfDqsZszA" title="After The Tents Fold" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+</div>
+
+<div id="midwayPanel" class="album-panel hidden">
+
+    <div class="album-panel-header">
         <h2>Midway Of Marvels</h2>
-
-        <p>
-            The lights stay on. The fog rolls in.
-            The Midway is already waiting.
-        </p>
-
-        <ul>
-            <li><a href="#open-the-gates">Open The Gates</a></li>
-            <li><a href="#funhouse-breathing">Funhouse Breathing</a></li>
-            <li><a href="#midway-after-dark">Midway After Dark</a></li>
-            <li><a href="#midway-of-marvels">Midway Of Marvels</a></li>
-            <li><a href="#dirt-familiar">Dirt Familiar</a></li>
-            <li><a href="#midway-riot">Midway Riot</a></li>
-            <li><a href="#family-in-the-fog">Family In The Fog</a></li>
-            <li><a href="#funhouse-mirror">Funhouse Mirror</a></li>
-            <li><a href="#everythings-fine">EVERYTHING’S FINE</a></li>
-        </ul>
+        <button class="close-album" data-close="midwayPanel">Close Album</button>
     </div>
 
-</div>
+    <p>
+        The lights stay on. The fog rolls in. The Midway is already waiting.
+    </p>
 
-<div class="featured-track" id="carnival-of-chaos-full-album">
-    <h2>CARNIVAL OF CHAOS — FULL ALBUM</h2>
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/mfHOSfSJEmg" title="Carnival Of Chaos Full Album" frameborder="0" allowfullscreen></iframe>
-</div>
+    <ul class="album-track-list">
+        <li><a href="#midway-full-album">Midway Of Marvels — Full Album</a></li>
+        <li><a href="#open-the-gates">Open The Gates</a></li>
+        <li><a href="#funhouse-breathing">Funhouse Breathing</a></li>
+        <li><a href="#midway-after-dark">Midway After Dark</a></li>
+        <li><a href="#midway-of-marvels">Midway Of Marvels</a></li>
+        <li><a href="#dirt-familiar">Dirt Familiar</a></li>
+        <li><a href="#midway-riot">Midway Riot</a></li>
+        <li><a href="#family-in-the-fog">Family In The Fog</a></li>
+        <li><a href="#funhouse-mirror">Funhouse Mirror</a></li>
+        <li><a href="#everythings-fine">EVERYTHING’S FINE</a></li>
+    </ul>
 
-<div class="music-grid">
-
-    <div class="album-card" id="clown-shoes-chaos">
-        <h2>CLOWN SHOES & CHAOS</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/74osDbQUn3g" title="CLOWN SHOES & CHAOS" frameborder="0" allowfullscreen></iframe>
+    <div class="featured-track album-featured" id="midway-full-album">
+        <h2>MIDWAY OF MARVELS — FULL ALBUM</h2>
+        <iframe width="100%" height="450" src="https://www.youtube.com/embed/HRZcoqz1bWY" title="The Midway Of Marvels Full Album" frameborder="0" allowfullscreen></iframe>
     </div>
 
-    <div class="album-card" id="under-the-big-top">
-        <h2>Under The Big Top</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/NLBhhuYWrHM" title="Under The Big Top" frameborder="0" allowfullscreen></iframe>
-    </div>
+    <div class="music-grid">
+        <div class="album-card" id="open-the-gates">
+            <h2>Open The Gates</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/mYLVAV2sXpo" title="Open The Gates" frameborder="0" allowfullscreen></iframe>
+        </div>
 
-    <div class="album-card" id="life-of-a-juggalo">
-        <h2>Life Of A Juggalo</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/w0tKSJUhPjo" title="Life Of A Juggalo" frameborder="0" allowfullscreen></iframe>
-    </div>
+        <div class="album-card" id="funhouse-breathing">
+            <h2>Funhouse Breathing</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/1w0uZ27AVQc" title="Funhouse Breathing" frameborder="0" allowfullscreen></iframe>
+        </div>
 
-    <div class="album-card" id="family-dont-fold">
-        <h2>Family Don’t Fold</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/0KG-_9plQZw" title="Family Don't Fold" frameborder="0" allowfullscreen></iframe>
-    </div>
+        <div class="album-card" id="midway-after-dark">
+            <h2>Midway After Dark</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/Oi7-2vjWmtc" title="Midway After Dark" frameborder="0" allowfullscreen></iframe>
+        </div>
 
-    <div class="album-card" id="carnival-bloodline">
-        <h2>Carnival Bloodline</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/NVTXaYzEI2g" title="Carnival Bloodline" frameborder="0" allowfullscreen></iframe>
-    </div>
+        <div class="album-card" id="midway-of-marvels">
+            <h2>Midway Of Marvels</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/P-j9HSTCr7w" title="Midway Of Marvels" frameborder="0" allowfullscreen></iframe>
+        </div>
 
-    <div class="album-card" id="laughing-at-the-world">
-        <h2>LAUGHING AT THE WORLD</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/eerR72Rr6m4" title="LAUGHING AT THE WORLD" frameborder="0" allowfullscreen></iframe>
-    </div>
+        <div class="album-card" id="dirt-familiar">
+            <h2>Dirt Familiar</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/lSjl9gZE-pU" title="Dirt Familiar" frameborder="0" allowfullscreen></iframe>
+        </div>
 
-    <div class="album-card" id="the-carnival-in-my-head">
-        <h2>The Carnival In My Head</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/4i_Nn3GOOcI" title="The Carnival In My Head" frameborder="0" allowfullscreen></iframe>
-    </div>
+        <div class="album-card" id="midway-riot">
+            <h2>Midway Riot</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/vln7IFisNEY" title="Midway Riot" frameborder="0" allowfullscreen></iframe>
+        </div>
 
-    <div class="album-card" id="one-more-ride">
-        <h2>ONE MORE RIDE</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/L6qRhQHg9_c" title="ONE MORE RIDE" frameborder="0" allowfullscreen></iframe>
-    </div>
+        <div class="album-card" id="family-in-the-fog">
+            <h2>Family In The Fog</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/-EG_LdpiHG4" title="Family In The Fog" frameborder="0" allowfullscreen></iframe>
+        </div>
 
-    <div class="album-card" id="two-voices-one-smile">
-        <h2>Two Voices, One Smile</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/iSppOVDu8M4" title="Two Voices, One Smile" frameborder="0" allowfullscreen></iframe>
-    </div>
+        <div class="album-card" id="funhouse-mirror">
+            <h2>Funhouse Mirror</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/PTrlvXvjtfo" title="Funhouse Mirror" frameborder="0" allowfullscreen></iframe>
+        </div>
 
-    <div class="album-card" id="after-the-tents-fold">
-        <h2>After The Tents Fold</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/7TCfDqsZszA" title="After The Tents Fold" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-</div>
-
-<div class="featured-track" id="midway-of-marvels-full-album">
-    <h2>MIDWAY OF MARVELS — FULL ALBUM</h2>
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/HRZcoqz1bWY" title="The Midway Of Marvels Full Album" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<div class="music-grid">
-
-    <div class="album-card" id="open-the-gates">
-        <h2>Open The Gates</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/mYLVAV2sXpo" title="Open The Gates" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div class="album-card" id="funhouse-breathing">
-        <h2>Funhouse Breathing</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/1w0uZ27AVQc" title="Funhouse Breathing" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div class="album-card" id="midway-after-dark">
-        <h2>Midway After Dark</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/Oi7-2vjWmtc" title="Midway After Dark" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div class="album-card" id="midway-of-marvels">
-        <h2>Midway Of Marvels</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/P-j9HSTCr7w" title="Midway Of Marvels" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div class="album-card" id="dirt-familiar">
-        <h2>Dirt Familiar</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/lSjl9gZE-pU" title="Dirt Familiar" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div class="album-card" id="midway-riot">
-        <h2>Midway Riot</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/vln7IFisNEY" title="Midway Riot" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div class="album-card" id="family-in-the-fog">
-        <h2>Family In The Fog</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/-EG_LdpiHG4" title="Family In The Fog" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div class="album-card" id="funhouse-mirror">
-        <h2>Funhouse Mirror</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/PTrlvXvjtfo" title="Funhouse Mirror" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <div class="album-card" id="everythings-fine">
-        <h2>EVERYTHING’S FINE</h2>
-        <iframe width="100%" height="220" src="https://www.youtube.com/embed/sNQlqrsVIvc" title="EVERYTHING'S FINE" frameborder="0" allowfullscreen></iframe>
+        <div class="album-card" id="everythings-fine">
+            <h2>EVERYTHING’S FINE</h2>
+            <iframe width="100%" height="220" src="https://www.youtube.com/embed/sNQlqrsVIvc" title="EVERYTHING'S FINE" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
 
 </div>
 ```
 
 </div>
+
+<script>
+const posterButtons = document.querySelectorAll(".poster-hotspot");
+const closeButtons = document.querySelectorAll(".close-album");
+
+posterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const albumId = button.dataset.album;
+        const albumPanel = document.getElementById(albumId);
+
+        document.querySelectorAll(".album-panel").forEach(panel => {
+            panel.classList.add("hidden");
+        });
+
+        albumPanel.classList.remove("hidden");
+        albumPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+});
+
+closeButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const albumId = button.dataset.close;
+        const albumPanel = document.getElementById(albumId);
+
+        albumPanel.classList.add("hidden");
+        document.querySelector(".album-wall").scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+});
+</script>
 
 </body>
 </html>

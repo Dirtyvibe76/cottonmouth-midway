@@ -394,27 +394,6 @@ text-shadow:0 0 10px red;
 line-height:1.5;
 }
 
-.album-card ul{
-text-align:left;
-line-height:1.8;
-margin:20px auto;
-max-width:430px;
-}
-
-.album-card ul li a{
-color:#ffcc66;
-text-decoration:none;
-font-weight:bold;
-transition:.25s;
-}
-
-.album-card ul li a:hover{
-color:white;
-text-shadow:
-0 0 8px orange,
-0 0 18px red;
-}
-
 .music-links{
 margin-top:20px;
 display:flex;
@@ -461,6 +440,150 @@ iframe{
 max-width:100%;
 border:2px solid rgba(255,80,0,.35);
 box-shadow:0 0 16px rgba(255,0,0,.25);
+}
+
+/* ALBUM POSTER WALL */
+
+.album-wall{
+width:90%;
+max-width:1100px;
+padding:30px;
+margin:30px auto 0 auto;
+text-align:center;
+background:rgba(0,0,0,.72);
+border:2px solid rgba(255,60,0,.55);
+box-shadow:
+0 0 18px rgba(255,0,0,.35),
+inset 0 0 18px rgba(255,80,0,.1);
+}
+
+.album-wall h2{
+color:orange;
+font-size:2rem;
+margin-top:0;
+text-shadow:0 0 10px red;
+}
+
+.album-wall p{
+color:#ffcc66;
+font-weight:bold;
+}
+
+.album-wall-image{
+position:relative;
+width:100%;
+max-width:900px;
+height:420px;
+margin:20px auto 0 auto;
+background:
+linear-gradient(rgba(0,0,0,.08), rgba(0,0,0,.25)),
+url("assets/images/musictentimage1.png");
+background-size:cover;
+background-position:left center;
+border:2px solid rgba(255,80,0,.5);
+box-shadow:0 0 20px rgba(255,0,0,.4);
+overflow:hidden;
+}
+
+.poster-hotspot{
+position:absolute;
+display:block;
+cursor:pointer;
+border:2px solid transparent;
+background:rgba(255,80,0,.02);
+transition:.25s;
+}
+
+.poster-hotspot:hover{
+background:rgba(255,120,0,.08);
+border-color:rgba(255,204,102,.85);
+box-shadow:
+0 0 18px rgba(255,170,0,.75),
+inset 0 0 18px rgba(255,80,0,.2);
+}
+
+.carnival-poster{
+left:2.5%;
+top:6%;
+width:29%;
+height:56%;
+}
+
+.midway-poster{
+left:35%;
+top:6%;
+width:30%;
+height:58%;
+}
+
+/* ALBUM PANELS */
+
+.album-panel{
+width:90%;
+max-width:1400px;
+margin:40px auto 0 auto;
+padding:30px;
+background:rgba(0,0,0,.78);
+border:2px solid rgba(255,60,0,.6);
+box-shadow:
+0 0 24px rgba(255,0,0,.45),
+inset 0 0 24px rgba(255,80,0,.12);
+text-align:center;
+}
+
+.album-panel-header{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.album-panel-header h2{
+color:orange;
+font-size:2.5rem;
+margin:0;
+text-shadow:0 0 15px red;
+}
+
+.close-album{
+color:white;
+background:#990000;
+border:1px solid red;
+padding:10px 14px;
+font-family:Georgia, serif;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 0 10px rgba(255,0,0,.45);
+}
+
+.close-album:hover{
+background:red;
+}
+
+.album-track-list{
+max-width:460px;
+margin:22px auto;
+text-align:left;
+line-height:1.8;
+}
+
+.album-track-list a{
+color:#ffcc66;
+text-decoration:none;
+font-weight:bold;
+transition:.25s;
+}
+
+.album-track-list a:hover{
+color:white;
+text-shadow:
+0 0 8px orange,
+0 0 18px red;
+}
+
+.album-featured{
+margin-top:30px;
 }
 
 /* MOBILE */
@@ -520,6 +643,23 @@ font-size:2.2rem;
 
 iframe{
     height:220px;
+}
+
+.album-wall{
+    padding:20px;
+}
+
+.album-wall-image{
+    height:280px;
+    background-position:left center;
+}
+
+.album-panel{
+    padding:20px;
+}
+
+.album-panel-header h2{
+    font-size:2rem;
 }
 ```
 
