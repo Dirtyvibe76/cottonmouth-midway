@@ -1,178 +1,283 @@
 body{
-    margin:0;
-    padding:0;
     background:black;
     color:white;
-    font-family:Georgia, serif;
+    font-family:Georgia,serif;
+    margin:0;
+    padding:0;
     overflow-x:hidden;
 }
 
+/* PROJECTOR EFFECT */
+
 .projector{
     position:fixed;
-    inset:0;
+    width:100%;
+    height:100%;
     pointer-events:none;
-    opacity:.06;
-    z-index:9999;
-    background:repeating-linear-gradient(
+    opacity:.05;
+    z-index:1000;
+
+    background:
+    repeating-linear-gradient(
         to bottom,
         transparent 0px,
         transparent 2px,
         white 3px,
         transparent 4px
     );
-    animation:flicker .15s infinite;
 }
+
+/* LANDING PAGE */
 
 #landing{
     width:100vw;
     height:100vh;
-    background-image:linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.55)), url("assets/Images/websitebackgroundclosed.png");
-    background-size:cover;
-    background-position:center;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
+    position:relative;
+    overflow:hidden;
+}
+
+#landing::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background-image:url("assets/Images/websitebackgroundclosed.png");
+
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:contain;
+
+    z-index:0;
+}
+
+.landing-content{
+    position:relative;
+    z-index:2;
     text-align:center;
 }
 
 .landing-content h1{
-    font-size:4rem;
+    font-size:5rem;
     color:orange;
     text-shadow:0 0 20px red;
+    margin-bottom:20px;
 }
 
 .landing-content p{
-    font-size:1.5rem;
-    font-weight:bold;
+    font-size:1.8rem;
+    margin-bottom:30px;
 }
 
-button{
-    background:darkred;
+#enterButton{
+    background:#990000;
     color:white;
+
     border:2px solid red;
-    padding:18px 45px;
+
+    padding:15px 40px;
+
     font-size:1.2rem;
     font-weight:bold;
+
     cursor:pointer;
+
+    transition:.3s;
 }
 
-button:hover{
+#enterButton:hover{
     background:red;
     transform:scale(1.05);
 }
 
-.hidden{
-    display:none;
-}
+/* FLASH TEXT */
 
 .gate-flash{
-    display:none;
     position:fixed;
+
     inset:0;
-    z-index:9998;
-    background:rgba(0,0,0,.9);
-    color:red;
+
+    background:black;
+
+    display:none;
     justify-content:center;
     align-items:center;
+
+    z-index:9999;
+
     font-size:5rem;
     font-weight:bold;
-    text-shadow:0 0 20px orange, 0 0 40px red;
-}
 
-#midway{
-    min-height:100vh;
-    background-image:linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.65)), url("assets/Images/websitebackgroundopen.png");
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-    padding-top:40px;
-}
-
-.midway-map{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
-    padding:30px;
-}
-
-.tent{
-    width:150px;
-    height:90px;
-    border:2px solid darkred;
-    background:rgba(0,0,0,.65);
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    color:white;
-    text-decoration:none;
-    font-size:2rem;
-    transition:.3s;
-}
-
-.tent:hover{
-    background:darkred;
-    transform:scale(1.08);
-}
-
-.tent span{
-    font-size:.9rem;
-    margin-top:8px;
-    font-weight:bold;
-}
-
-section{
-    max-width:900px;
-    margin:80px auto;
-    padding:40px 25px;
-    background:rgba(0,0,0,.65);
-    border:1px solid #3a0000;
-}
-
-h2{
     color:orange;
-    text-shadow:0 0 10px red;
+
+    text-shadow:
+        0 0 20px red,
+        0 0 40px red,
+        0 0 80px red;
+}
+
+.gate-flash.active{
+    display:flex;
+    animation:flashFlicker .12s infinite;
+}
+
+@keyframes flashFlicker{
+
+    0%{opacity:1;}
+    25%{opacity:.4;}
+    50%{opacity:1;}
+    75%{opacity:.2;}
+    100%{opacity:1;}
+
 }
 
 .fade-out{
     animation:fadeOut 1s forwards;
 }
 
-.gate-shake{
-    animation:gateShake .12s infinite, flashText .4s infinite;
-}
-
-.midway-reveal{
-    animation:midwayReveal 1.5s ease-out forwards;
-}
-
 @keyframes fadeOut{
-    from{opacity:1;}
-    to{opacity:0;}
+
+    from{
+        opacity:1;
+    }
+
+    to{
+        opacity:0;
+    }
+
 }
 
-@keyframes gateShake{
-    0%{transform:translate(0,0);}
-    25%{transform:translate(4px,-2px);}
-    50%{transform:translate(-4px,2px);}
-    75%{transform:translate(2px,4px);}
-    100%{transform:translate(0,0);}
+/* MIDWAY PAGE */
+
+.hidden{
+    display:none;
 }
 
-@keyframes flashText{
-    0%{opacity:1;}
-    50%{opacity:.45;}
-    100%{opacity:1;}
+#midway{
+
+    min-height:100vh;
+
+    background-image:url("assets/Images/websitebackgroundopen.png");
+
+    background-position:center top;
+    background-size:cover;
+    background-repeat:no-repeat;
+
 }
 
-@keyframes midwayReveal{
-    from{opacity:0; transform:scale(.97);}
-    to{opacity:1; transform:scale(1);}
+/* HEADER */
+
+header{
+    text-align:center;
+    padding-top:80px;
+    padding-bottom:60px;
 }
 
-@keyframes flicker{
-    0%{opacity:.05;}
-    50%{opacity:.09;}
-    100%{opacity:.05;}
+h1{
+    font-size:4rem;
+    color:orange;
+
+    text-shadow:
+    0 0 10px red,
+    0 0 20px red,
+    0 0 30px red;
+}
+
+.tagline{
+    font-size:1.5rem;
+}
+
+/* MIDWAY BUTTONS */
+
+.midway-map{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+
+    padding:40px;
+}
+
+.tent{
+
+    width:150px;
+    height:150px;
+
+    border:2px solid darkred;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+    color:white;
+
+    font-size:3rem;
+
+    background:rgba(0,0,0,.5);
+
+    transition:.3s;
+}
+
+.tent:hover{
+
+    background:darkred;
+
+    transform:scale(1.1);
+
+    box-shadow:
+    0 0 15px red,
+    0 0 30px red;
+
+}
+
+.tent span{
+    font-size:1rem;
+    margin-top:10px;
+}
+
+/* CONTENT SECTIONS */
+
+section{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:80px 20px;
+
+    border-top:1px solid #333;
+
+    background:rgba(0,0,0,.6);
+
+}
+
+h2{
+    color:orange;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .landing-content h1{
+        font-size:2.5rem;
+    }
+
+    .gate-flash{
+        font-size:2rem;
+        text-align:center;
+        padding:20px;
+    }
+
+    h1{
+        font-size:2.5rem;
+    }
+
 }

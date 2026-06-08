@@ -10,30 +10,42 @@ ambienceAudio.loop = true;
 ambienceAudio.volume = 0.25;
 
 enterButton.addEventListener("click", () => {
+
     gateAudio.currentTime = 0;
-    gateAudio.play().catch(() => {});
+    gateAudio.play();
 
     landing.classList.add("fade-out");
 
     setTimeout(() => {
+
         landing.style.display = "none";
+
         gateFlash.style.display = "flex";
-        gateFlash.textContent = "OPEN THE GATES!";
-        gateFlash.classList.add("gate-shake");
-    }, 800);
+        gateFlash.innerHTML = "OPEN THE GATES!";
+        gateFlash.classList.add("active");
+
+    }, 1000);
 
     setTimeout(() => {
-        gateFlash.textContent = "WELCOME TO THE MIDWAY";
-    }, 1800);
+
+        gateFlash.innerHTML = "WELCOME TO THE MIDWAY";
+
+    }, 2000);
 
     setTimeout(() => {
+
+        gateFlash.classList.remove("active");
         gateFlash.style.display = "none";
-        gateFlash.classList.remove("gate-shake");
 
         midway.classList.remove("hidden");
-        midway.classList.add("midway-reveal");
 
-        ambienceAudio.play().catch(() => {});
-        window.scrollTo(0, 0);
-    }, 3000);
+        ambienceAudio.play();
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }, 3500);
+
 });
