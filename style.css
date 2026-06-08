@@ -1,66 +1,88 @@
-body {
-    margin: 0;
-    background: black;
-    color: #ffcc00;
-    font-family: Georgia, serif;
-    height: 100vh;
-    overflow: hidden;
+body{
+background:black;
+color:white;
+font-family:Georgia,serif;
+margin:0;
+padding:0;
+overflow-x:hidden;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
+.projector{
+position:fixed;
+width:100%;
+height:100%;
+pointer-events:none;
+opacity:.05;
+background:
+repeating-linear-gradient(
+to bottom,
+transparent 0px,
+transparent 2px,
+white 3px,
+transparent 4px
+);
 }
 
-h1 {
-    font-size: 4rem;
-    text-shadow: 0 0 20px red;
+header{
+text-align:center;
+padding-top:100px;
+padding-bottom:100px;
 }
 
-.tagline {
-    font-size: 1.5rem;
-    color: white;
-    margin-bottom: 40px;
+h1{
+font-size:4rem;
+color:orange;
+text-shadow:0 0 20px red;
 }
 
-button {
-    background: darkred;
-    color: white;
-    border: none;
-    padding: 20px 40px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: 0.3s;
+.tagline{
+font-size:1.5rem;
 }
 
-button:hover {
-    background: red;
-    transform: scale(1.05);
+.midway-map{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+padding:50px;
 }
 
-.projector {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    opacity: 0.08;
-    background-image:
-        repeating-linear-gradient(
-            to bottom,
-            transparent 0px,
-            transparent 2px,
-            white 3px,
-            transparent 4px
-        );
-    animation: flicker .15s infinite;
+.tent{
+width:150px;
+height:150px;
+
+border:2px solid darkred;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-decoration:none;
+color:white;
+
+font-size:3rem;
+
+transition:.3s;
 }
 
-@keyframes flicker {
-    0% { opacity: .08; }
-    50% { opacity: .12; }
-    100% { opacity: .08; }
+.tent:hover{
+background:darkred;
+transform:scale(1.1);
+}
+
+.tent span{
+font-size:1rem;
+margin-top:10px;
+}
+
+section{
+max-width:900px;
+margin:auto;
+padding:80px 20px;
+border-top:1px solid #333;
+}
+
+h2{
+color:orange;
 }
