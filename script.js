@@ -5,9 +5,13 @@ const gateFlash = document.getElementById("gateFlash");
 
 const gateAudio = new Audio("assets/audio/openthegates.wav");
 
+const ambienceAudio = new Audio("assets/audio/background.wav");
+ambienceAudio.loop = true;
+ambienceAudio.volume = 0.15;
+
 enterButton.addEventListener("click", () => {
     gateAudio.currentTime = 0;
-    gateAudio.play();
+    gateAudio.play().catch(() => {});
 
     landing.classList.add("fade-out");
 
@@ -25,8 +29,12 @@ enterButton.addEventListener("click", () => {
     setTimeout(() => {
         gateFlash.style.display = "none";
         gateFlash.classList.remove("gate-shake");
+
         midway.classList.remove("hidden");
         midway.classList.add("midway-reveal");
+
+        ambienceAudio.play().catch(() => {});
+
         window.scrollTo(0, 0);
     }, 3000);
 });
