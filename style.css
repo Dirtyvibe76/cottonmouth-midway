@@ -199,50 +199,50 @@ html, body{
 
 /* BIG TOP */
 .bigtop-link{
-    top:49.2%;
+    top:48.4%;
     right:21%;
-    width:11%;
-    height:4.5%;
+    width:10%;
+    height:4%;
 }
 
 /* FUNHOUSE */
 .funhouse-link{
-    top:55.0%;
+    top:54.2%;
     right:21%;
-    width:11%;
-    height:4.5%;
+    width:10%;
+    height:4%;
 }
 
 /* GAMES */
 .games-link{
-    top:60.8%;
+    top:60.0%;
     right:21%;
-    width:11%;
-    height:4.5%;
+    width:10%;
+    height:4%;
 }
 
-/* MUSIC TENT */
+/* MUSIC */
 .music-link{
-    top:66.6%;
+    top:65.6%;
     right:21%;
-    width:13%;
-    height:4.8%;
+    width:9%;
+    height:4%;
 }
 
 /* FREAK SHOW */
 .freakshow-link{
-    top:72.5%;
+    top:71.5%;
     right:21%;
-    width:14%;
-    height:4.8%;
+    width:9%;
+    height:4%;
 }
 
-/* FOOD / GALLERY */
+/* FOOD & DRINKS */
 .gallery-link{
-    top:78.7%;
+    top:77.4%;
     right:21%;
-    width:16%;
-    height:5%;
+    width:9%;
+    height:4%;
 }
 
 /* CONTENT */
