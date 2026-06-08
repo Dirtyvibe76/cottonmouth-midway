@@ -45,7 +45,7 @@ html, body{
     content:"";
     position:absolute;
     inset:0;
-    background-image:url("assets/Images/websitebackgroundclosed.png");
+    background-image:url("assets/images/websitebackgroundclosed.png");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
