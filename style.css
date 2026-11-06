@@ -685,3 +685,20 @@ iframe{
     .music-grid,.featured-track,.album-panel,.album-wall { box-sizing:border-box; width:100%; }
     .album-panel { padding:16px; }
 }
+
+/* Native, onsite Music Tent player; no YouTube embeds. */
+.tent-player,.tent-library { box-sizing:border-box; width:min(100%,1050px); padding:clamp(18px,4vw,35px); background:rgba(0,0,0,.85); border:2px solid #9b3d15; box-shadow:0 0 22px rgba(255,66,0,.3); text-align:center; }
+.tent-player h2,.tent-library h2,.tent-album h3 { color:#ffae40; text-shadow:0 0 13px #8a1900; }
+.player-kicker {color:#ffcc66; font-weight:bold; letter-spacing:.18em;}
+.tent-player audio {display:block; width:100%; margin:18px auto; accent-color:#d64513;}
+.player-actions {display:flex; justify-content:center; gap:15px; flex-wrap:wrap;}
+.player-actions button,.tent-track {background:#360800; color:#fff0d0; font:inherit; border:1px solid #a54820; padding:10px 14px; cursor:pointer;}
+.player-actions button:hover:not(:disabled),.tent-track:hover:not(:disabled),.tent-track[aria-current="true"] {background:#8c2000; box-shadow:0 0 10px #ba3b11;}
+.player-actions button:disabled,.tent-track:disabled {opacity:.45; cursor:not-allowed;}
+.tent-albums {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr)); gap:20px; text-align:left;}
+.tent-album {padding:16px 20px; background:rgba(32,7,3,.8);border:1px solid #77310f;}
+.tent-album h3 {text-align:center;}
+.tent-song-list {padding-left:22px;}
+.tent-song-list li {margin:8px 0;}
+.tent-track {width:100%;text-align:left;overflow-wrap:anywhere;}
+#playerStatus {color:#ffc77c;min-height:1.5em;}
