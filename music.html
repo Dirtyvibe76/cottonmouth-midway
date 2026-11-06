@@ -27,7 +27,7 @@
         Step beneath the canvas and listen closely.
         Every attraction has a sound.
         Every song pulls you deeper.
-        Click an album poster on the wall to open its track list.
+        Explore the albums and choose a track below.
     </p>
 </div>
 
@@ -41,21 +41,10 @@
     <iframe loading="lazy" width="100%" height="450" src="https://www.youtube.com/embed/0KG-_9plQZw" title="Family Don't Fold" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<div class="album-wall">
-    <h2>THE ALBUM WALL</h2>
-    <p>Choose a poster. The Music Tent remembers.</p>
-
-    <div class="album-wall-image">
-        <button type="button" class="poster-hotspot carnival-poster" data-album="carnivalPanel" aria-expanded="false" aria-controls="carnivalPanel" aria-label="Open Carnival Of Chaos"></button>
-        <button type="button" class="poster-hotspot midway-poster" data-album="midwayPanel" aria-expanded="false" aria-controls="midwayPanel" aria-label="Open Midway Of Marvels"></button>
-    </div>
-</div>
-
-<div id="carnivalPanel" class="album-panel hidden">
+<div id="carnivalPanel" class="album-panel">
 
     <div class="album-panel-header">
         <h2>Carnival Of Chaos</h2>
-        <button type="button" class="close-album" data-close="carnivalPanel">Close Album</button>
     </div>
 
     <p>
@@ -135,11 +124,10 @@
 
 </div>
 
-<div id="midwayPanel" class="album-panel hidden">
+<div id="midwayPanel" class="album-panel">
 
     <div class="album-panel-header">
         <h2>Midway Of Marvels</h2>
-        <button type="button" class="close-album" data-close="midwayPanel">Close Album</button>
     </div>
 
     <p>
@@ -215,37 +203,7 @@
 
 </div>
 
-<script>
-const posterButtons = document.querySelectorAll(".poster-hotspot");
-const closeButtons = document.querySelectorAll(".close-album");
 
-posterButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        const albumId = button.dataset.album;
-        const albumPanel = document.getElementById(albumId);
-
-        document.querySelectorAll(".poster-hotspot").forEach(poster => poster.setAttribute("aria-expanded", "false"));
-        document.querySelectorAll(".album-panel").forEach(panel => {
-            panel.classList.add("hidden");
-        });
-
-        albumPanel.classList.remove("hidden");
-        button.setAttribute("aria-expanded", "true");
-        albumPanel.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-});
-
-closeButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        const albumId = button.dataset.close;
-        const albumPanel = document.getElementById(albumId);
-
-        albumPanel.classList.add("hidden");
-        document.querySelector(`[data-album="${albumId}"]`)?.setAttribute("aria-expanded", "false");
-        document.querySelector(".album-wall").scrollIntoView({ behavior: "smooth", block: "center" });
-    });
-});
-</script>
 
 </body>
 </html>
