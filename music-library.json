@@ -1,0 +1,145 @@
+{
+  "about": "Upload MP3 audio to assets/music/ using these filenames. Add future releases here with a releaseDate (YYYY-MM-DD) to update Now Playing automatically. Only tracks with a valid audio file are playable.",
+  "tracks": [
+    {
+      "id": "clown-shoes-chaos-whoop-whoop",
+      "title": "CLOWN SHOES & CHAOS (WHOOP WHOOP)",
+      "album": "Carnival of Chaos",
+      "src": "assets/music/clown-shoes-chaos-whoop-whoop.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "under-the-big-top",
+      "title": "Under The Big Top",
+      "album": "Carnival of Chaos",
+      "src": "assets/music/under-the-big-top.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "life-of-a-juggalo",
+      "title": "Life Of A Juggalo",
+      "album": "Carnival of Chaos",
+      "src": "assets/music/life-of-a-juggalo.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "family-dont-fold",
+      "title": "Family Don’t Fold",
+      "album": "Carnival of Chaos",
+      "src": "assets/music/family-dont-fold.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "carnival-bloodline",
+      "title": "Carnival Bloodline",
+      "album": "Carnival of Chaos",
+      "src": "assets/music/carnival-bloodline.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "laughing-at-the-world",
+      "title": "LAUGHING AT THE WORLD",
+      "album": "Carnival of Chaos",
+      "src": "assets/music/laughing-at-the-world.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "the-carnival-in-my-head",
+      "title": "The Carnival In My Head",
+      "album": "Carnival of Chaos",
+      "src": "assets/music/the-carnival-in-my-head.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "one-more-ride-freak-cut",
+      "title": "ONE MORE RIDE (FREAK CUT)",
+      "album": "Carnival of Chaos",
+      "src": "assets/music/one-more-ride-freak-cut.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "two-voices-one-smile",
+      "title": "Two Voices, One Smile",
+      "album": "Carnival of Chaos",
+      "src": "assets/music/two-voices-one-smile.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "after-the-tents-fold",
+      "title": "After The Tents Fold",
+      "album": "Carnival of Chaos",
+      "src": "assets/music/after-the-tents-fold.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "open-the-gates",
+      "title": "Open The Gates",
+      "album": "Midway of Marvels",
+      "src": "assets/music/open-the-gates.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "funhouse-breathing",
+      "title": "Funhouse Breathing",
+      "album": "Midway of Marvels",
+      "src": "assets/music/funhouse-breathing.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "midway-after-dark",
+      "title": "Midway After Dark",
+      "album": "Midway of Marvels",
+      "src": "assets/music/midway-after-dark.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "midway-of-marvels",
+      "title": "Midway Of Marvels",
+      "album": "Midway of Marvels",
+      "src": "assets/music/midway-of-marvels.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "dirt-familiar",
+      "title": "Dirt Familiar",
+      "album": "Midway of Marvels",
+      "src": "assets/music/dirt-familiar.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "midway-riot",
+      "title": "Midway Riot",
+      "album": "Midway of Marvels",
+      "src": "assets/music/midway-riot.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "family-in-the-fog",
+      "title": "Family In The Fog",
+      "album": "Midway of Marvels",
+      "src": "assets/music/family-in-the-fog.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "funhouse-mirror",
+      "title": "Funhouse Mirror",
+      "album": "Midway of Marvels",
+      "src": "assets/music/funhouse-mirror.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "everythings-fine",
+      "title": "EVERYTHING’S FINE",
+      "album": "Midway of Marvels",
+      "src": "assets/music/everythings-fine.mp3",
+      "releaseDate": null
+    },
+    {
+      "id": "the-midways-halloween",
+      "title": "The Midway’s Halloween",
+      "album": "Singles",
+      "src": "assets/music/the-midways-halloween.mp3",
+      "releaseDate": null
+    }
+  ]
+}
