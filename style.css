@@ -915,3 +915,58 @@ body.gate-entering #midway {
   body.gate-entering #landing.fade-out { animation:none; opacity:0; pointer-events:none; }
   #gateFlash.show { animation:none; }
 }
+
+
+/* BIG TOP — guest artist promotion stage */
+.bigtop-bg {
+  background:
+    linear-gradient(160deg,rgba(7,2,5,.72),rgba(16,5,7,.94)),
+    url("assets/images/websitebackgroundopen.png") center/cover fixed no-repeat;
+}
+.bigtop-page{gap:28px;justify-content:flex-start;box-sizing:border-box;width:100%;max-width:100%;padding-top:35px}
+.bigtop-page *{box-sizing:border-box}
+.bigtop-heading{width:min(100%,950px);text-align:center}
+.bigtop-kicker{color:#eeb75e;font-weight:bold;letter-spacing:.19em;font-size:.78rem;text-transform:uppercase}
+.bigtop-stage,.bigtop-lineup{width:min(100%,1250px);background:rgba(13,6,8,.92);border:2px solid #963f20;border-radius:10px;box-shadow:0 0 26px rgba(214,61,16,.27),inset 0 0 30px rgba(112,20,12,.13)}
+.bigtop-stage{display:grid;grid-template-columns:minmax(260px,.87fr) minmax(0,1.4fr);align-items:center;gap:26px;padding:28px;scroll-margin-top:22px}
+.bigtop-stage-info{min-width:0}
+.bigtop-stage h2,.bigtop-lineup h2{font-size:clamp(1.55rem,3vw,2.25rem);color:#ffac50;margin:.3em 0 .7em;text-shadow:0 0 14px rgba(220,60,25,.7)}
+.bigtop-stage h3{color:#f9e2b6;font-size:1.4rem;margin:.5em 0;overflow-wrap:anywhere}
+.bigtop-stage-info p{line-height:1.55}
+.bigtop-stage-description{color:#d5b6ac}
+.bigtop-stage-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.bigtop-stage-links a{min-height:44px;display:inline-flex;align-items:center}
+.bigtop-outline-button{border:1px solid #d7924e;color:#ffe2b4;text-decoration:none;font-weight:bold;padding:10px 14px;border-radius:5px;background:#2a0a0c}
+.bigtop-video{min-width:0;aspect-ratio:16/9;border:2px solid #ad5b30;background:radial-gradient(circle,#4a1d19 0%,#0b0709 70%);border-radius:7px;overflow:hidden;box-shadow:0 0 30px rgba(167,44,10,.27)}
+.bigtop-video iframe{display:block;width:100%;height:100%;border:0;box-shadow:none}
+.bigtop-video-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;gap:6px;color:#f4c687}
+.bigtop-video-placeholder span{font-size:4rem}
+.bigtop-video-placeholder strong{font-size:1.2rem;letter-spacing:.11em}
+.bigtop-video-placeholder p{font-size:.9rem;max-width:280px}
+.bigtop-preview-button{display:block;width:100%;height:100%;font:bold clamp(.9rem,2vw,1.25rem) Georgia,serif;color:#ffe2b4;border:0;cursor:pointer;background:radial-gradient(circle,rgba(138,33,16,.8),rgba(14,5,8,.95));}
+.bigtop-preview-button:hover,.bigtop-preview-button:focus-visible{color:white;outline:3px solid #ffce69;outline-offset:-5px}
+.bigtop-lineup{padding:26px}
+.bigtop-lineup-title{display:flex;align-items:end;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.bigtop-lineup-title h2{margin:5px 0 10px}
+.bigtop-count{color:#edb87c;font-weight:bold}
+.bigtop-tools{display:flex;align-items:center;flex-wrap:wrap;gap:13px;margin:12px 0 24px;color:#f8d4aa}
+.bigtop-tools label{font-size:.95rem}
+.bigtop-tools input{min-width:min(100%,300px);flex:1;max-width:500px;color:white;background:#130a0e;border:1px solid #a15838;padding:13px 15px;border-radius:5px;font-size:1rem}
+.bigtop-tools input:focus-visible{outline:2px solid #ffc773}
+.bigtop-artist-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,305px),1fr));gap:18px}
+.bigtop-artist-card{min-width:0;display:flex;flex-direction:column;background:linear-gradient(160deg,#321214,#13090c);border:1px solid #9c472b;border-radius:9px;padding:21px;box-shadow:0 8px 23px rgba(0,0,0,.25)}
+.bigtop-artist-card h3{margin:0 0 9px;color:#ffcc86;font-size:1.55rem;overflow-wrap:anywhere}
+.bigtop-artist-description{color:#e7c7b8;line-height:1.5}
+.bigtop-song-list{display:flex;flex-direction:column;align-items:stretch;gap:9px;margin:12px 0 20px}
+.bigtop-song-button{padding:12px;border:1px solid #b7663a;background:#461b18;color:#fff0d7;border-radius:5px;text-align:left;min-height:44px;cursor:pointer;font:bold .95rem Georgia,serif}
+.bigtop-song-button:hover,.bigtop-song-button:focus-visible,.bigtop-song-button[aria-pressed="true"]{background:#8a281b;border-color:#ffd080;outline:2px solid #ffc675;outline-offset:1px}
+.bigtop-channel-link{margin-top:auto;color:#ffe0a0;text-decoration:underline;font-weight:bold;line-height:1.55}
+.bigtop-channel-link:hover,.bigtop-channel-link:focus-visible{color:white;outline:2px solid #f4b260}
+.bigtop-empty{grid-column:1/-1;padding:45px 20px;border:1px dashed #a75f38;border-radius:7px;text-align:center;color:#f2d5b0;line-height:1.6}
+.bigtop-footer{max-width:850px;text-align:center;color:#c6a8a1;font-size:.9rem;line-height:1.55}
+@media(max-width:800px){
+  .bigtop-stage{grid-template-columns:1fr;padding:18px}
+  .bigtop-lineup{padding:16px}
+  .bigtop-page{padding:20px 12px 35px}
+  .bigtop-heading{padding:25px 17px}
+}
