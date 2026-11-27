@@ -38,19 +38,35 @@
 <div id="midway" class="hidden">
 
     <div class="midway-hero">
-        <!-- Both the art and its click targets share the image's intrinsic 4:3 coordinate system.
-             This avoids hitbox drift from letterboxing at wide/narrow aspect ratios. -->
-        <div class="midway-artwork">
-            <img src="assets/images/websitebackgroundopen.png" class="midway-image" alt="The Midway of Marvels carnival entrance, with attraction signs on the right" width="1448" height="1086">
-            <nav id="signMenu" aria-label="Attractions on the wooden sign">
-                <a href="bigtop.html" class="sign-link bigtop-link" aria-label="Big Top"></a>
-                <a href="funhouse.html" class="sign-link funhouse-link" aria-label="Funhouse"></a>
-                <a href="games.html" class="sign-link games-link" aria-label="Games"></a>
-                <a href="music.html" class="sign-link music-link" aria-label="Music Tent"></a>
-                <a href="freakshow.html" class="sign-link freakshow-link" aria-label="Freak Show"></a>
-                <a href="gallery.html" class="sign-link gallery-link" aria-label="Gallery"></a>
-            </nav>
-        </div>
+        <!-- The artwork and all six clickable hitboxes use the SAME SVG viewBox.
+             This avoids CSS/object-fit/viewport coordinate drift at all aspect ratios. -->
+        <svg class="midway-scene" viewBox="0 0 1448 1086"
+             xmlns="http://www.w3.org/2000/svg"
+             aria-label="Midway entrance with clickable attraction signs" role="group">
+            <image href="assets/images/websitebackgroundopen.png"
+                   x="0" y="0" width="1448" height="1086"
+                   preserveAspectRatio="none" />
+            <g class="midway-signs">
+              <a href="bigtop.html" aria-label="Big Top">
+                <rect x="1140" y="525" width="260" height="55" />
+              </a>
+              <a href="funhouse.html" aria-label="Funhouse">
+                <rect x="1135" y="586" width="265" height="56" />
+              </a>
+              <a href="games.html" aria-label="Games">
+                <rect x="1137" y="646" width="265" height="57" />
+              </a>
+              <a href="music.html" aria-label="Music Tent">
+                <rect x="1135" y="709" width="272" height="57" />
+              </a>
+              <a href="freakshow.html" aria-label="Freak Show">
+                <rect x="1133" y="770" width="274" height="57" />
+              </a>
+              <a href="gallery.html" aria-label="Gallery (bottom sign: Food and Drinks)">
+                <rect x="1132" y="834" width="275" height="59" />
+              </a>
+            </g>
+        </svg>
         <nav class="mobile-midway-nav" aria-label="Midway attractions">
           <a href="bigtop.html">Big Top</a>
           <a href="funhouse.html">Funhouse</a>
