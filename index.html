@@ -38,16 +38,19 @@
 <div id="midway" class="hidden">
 
     <div class="midway-hero">
-        <img src="assets/images/websitebackgroundopen.png" class="midway-image" alt="Midway of Marvels">
-
-        <nav id="signMenu">
-            <a href="bigtop.html" class="sign-link bigtop-link" aria-label="Big Top"></a>
-            <a href="funhouse.html" class="sign-link funhouse-link" aria-label="Funhouse"></a>
-            <a href="games.html" class="sign-link games-link" aria-label="Games"></a>
-            <a href="music.html" class="sign-link music-link" aria-label="Music Tent"></a>
-            <a href="freakshow.html" class="sign-link freakshow-link" aria-label="Freak Show"></a>
-            <a href="gallery.html" class="sign-link gallery-link" aria-label="Gallery"></a>
-        </nav>
+        <!-- Both the art and its click targets share the image's intrinsic 4:3 coordinate system.
+             This avoids hitbox drift from letterboxing at wide/narrow aspect ratios. -->
+        <div class="midway-artwork">
+            <img src="assets/images/websitebackgroundopen.png" class="midway-image" alt="The Midway of Marvels carnival entrance, with attraction signs on the right" width="1448" height="1086">
+            <nav id="signMenu" aria-label="Attractions on the wooden sign">
+                <a href="bigtop.html" class="sign-link bigtop-link" aria-label="Big Top"></a>
+                <a href="funhouse.html" class="sign-link funhouse-link" aria-label="Funhouse"></a>
+                <a href="games.html" class="sign-link games-link" aria-label="Games"></a>
+                <a href="music.html" class="sign-link music-link" aria-label="Music Tent"></a>
+                <a href="freakshow.html" class="sign-link freakshow-link" aria-label="Freak Show"></a>
+                <a href="gallery.html" class="sign-link gallery-link" aria-label="Gallery"></a>
+            </nav>
+        </div>
         <nav class="mobile-midway-nav" aria-label="Midway attractions">
           <a href="bigtop.html">Big Top</a>
           <a href="funhouse.html">Funhouse</a>
