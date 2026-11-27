@@ -91,6 +91,7 @@ function render() {
       b.addEventListener("click",()=>choose(artist,video,b));
       songs.append(b);
     });
+    if(!artist.videos.length) songs.append(textNode("p","bigtop-artist-description","Visit the artist's channel to hear their music. Featured videos will be added soon."));
     card.append(songs);
     const link=document.createElement("a");
     link.href=artist.channel;link.target="_blank";link.rel="noopener noreferrer";
@@ -107,7 +108,6 @@ async function load() {
     artists=data.artists.map(a=>{
       if(!a || typeof a.name!=="string" || !a.name.trim() || !parseChannel(a.channel))return null;
       const videos=Array.isArray(a.videos)?a.videos.filter(v=>v&&typeof v.title==="string"&&v.title.trim()&&typeof v.url==="string"&&parseVideo(v.url)):[];
-      if(!videos.length)return null;
       return {name:a.name.trim().slice(0,100),description:typeof a.description==="string"?a.description.slice(0,600):"",channel:parseChannel(a.channel),videos:videos.slice(0,15)};
     }).filter(Boolean);
     render();
@@ -115,15 +115,22 @@ async function load() {
     if(artists.length){
       const first=artists[0],video=first.videos[0];
       artistTitle.textContent=first.name;
-      songTitle.textContent="Featured song: "+video.title;
+      songTitle.textContent=video?"Featured song: "+video.title:"Discover their music on YouTube";
       desc.textContent=first.description||"Select Play on a track to watch here.";
       channelLink.href=first.channel;channelLink.classList.remove("hidden");
-      videoLink.href="https://www.youtube.com/watch?v="+parseVideo(video.url);
-      videoLink.classList.remove("hidden");
-      const play=document.createElement("button");play.type="button";play.className="bigtop-preview-button";
-      play.textContent="▶ PLAY FEATURED PERFORMANCE";
-      play.addEventListener("click",()=>choose(first,video,null));
-      videoContainer.replaceChildren(play);
+      if(video){videoLink.href="https://www.youtube.com/watch?v="+parseVideo(video.url);videoLink.classList.remove("hidden");}
+      else videoLink.classList.add("hidden");
+      if(video){
+        const play=document.createElement("button");play.type="button";play.className="bigtop-preview-button";
+        play.textContent="▶ PLAY FEATURED PERFORMANCE";
+        play.addEventListener("click",()=>choose(first,video,null));
+        videoContainer.replaceChildren(play);
+      }else{
+        const container=document.createElement("div");container.className="bigtop-video-placeholder";
+        container.append(textNode("span","","🎙️"),textNode("strong","","DISCOVER "+first.name.toUpperCase()));
+        const link=document.createElement("a");link.href=first.channel;link.target="_blank";link.rel="noopener noreferrer";link.className="listen-button";link.textContent="LISTEN ON THEIR CHANNEL ↗";
+        container.append(link);videoContainer.replaceChildren(container);
+      }
     }
   }catch(err){showError("The lineup is temporarily unavailable. Please check back soon.");}
 }
