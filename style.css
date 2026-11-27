@@ -970,3 +970,14 @@ body.gate-entering #midway {
   .bigtop-page{padding:20px 12px 35px}
   .bigtop-heading{padding:25px 17px}
 }
+
+/* Homepage hardening: the Midway artwork is also painted as a sharp fallback
+   behind the SVG. If SVG external <image> is not painted in a visitor's browser,
+   the user still sees the entrance rather than only a blurred backdrop.
+   All click targets remain in the source-image SVG coordinate system. */
+.midway-hero::after {
+  background-image: url("assets/images/websitebackgroundopen.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
