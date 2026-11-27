@@ -51,13 +51,14 @@ function visibleTracks() {
 function renderTracks() {
   list.replaceChildren();
   const visible=visibleTracks();
-  queue.textContent=`${visible.length} songs`;
+  queue.textContent=`${visible.filter(t=>t.published).length} ready · ${visible.length} listed`;
   if(!visible.length) { const p=document.createElement("p");p.textContent="No songs match that search.";list.append(p);return; }
   visible.forEach((t,i)=>{
     const li=document.createElement("li");li.className="jukebox-track"+(current?.id===t.id?" current":"");
     const b=button(`${String(i+1).padStart(2,"0")} · ${t.title}`,"track-select",()=>select(t));
+    b.disabled=!t.published;
     b.setAttribute("aria-label","Play "+t.title);
-    const meta=document.createElement("span");meta.className="track-album";meta.textContent=t.album;
+    const meta=document.createElement("span");meta.className="track-album";meta.textContent=t.album+(t.published?" · Ready":" · Audio pending");
     li.append(b,meta);list.append(li);
   });
 }
@@ -75,6 +76,7 @@ async function select(t, autoplay=true) {
   current=t;nowTitle.textContent=t.title;nowAlbum.textContent=t.album;
   seek.value=0;time.textContent="0:00 / 0:00";play.textContent="▶";renderTracks();
   notice("Checking available audio…");
+  if(!t.published){play.disabled=true;notice("Audio for this track has not been uploaded to the website yet.");return;}
   const exists=await audioExists(t.src);
   if(version!==requestVersion)return;
   if(!exists) {
@@ -85,16 +87,17 @@ async function select(t, autoplay=true) {
   if(autoplay) try {await audio.play();} catch {notice("Select Play to begin listening.");}
 }
 function step(direction) {
-  if(!tracks.length)return;
-  if(shuffle && direction>0) {
-    const alternatives=tracks.filter(t=>t.id!==current?.id);
-    return select(alternatives[Math.floor(Math.random()*alternatives.length)]||tracks[0]);
+  const playable=tracks.filter(t=>t.published);
+  if(!playable.length)return notice("The jukebox has no uploaded audio yet.");
+  if(shuffle && direction>0 && playable.length>1) {
+    const alternatives=playable.filter(t=>t.id!==current?.id);
+    return select(alternatives[Math.floor(Math.random()*alternatives.length)]);
   }
-  const index=tracks.findIndex(t=>t.id===current?.id);
-  select(tracks[(index+direction+tracks.length)%tracks.length]);
+  const index=playable.findIndex(t=>t.id===current?.id);
+  select(playable[(index+direction+playable.length)%playable.length]);
 }
 play.addEventListener("click",async()=>{
-  if(!current)return select(tracks[0]);
+  if(!current)return select(tracks.find(t=>t.published)||tracks[0]);
   if(audio.paused)try {await audio.play();}catch {notice("Playback unavailable.");}
   else audio.pause();
 });
@@ -121,5 +124,5 @@ if("mediaSession" in navigator){
   navigator.mediaSession.setActionHandler("seekto",({seekTime})=>{if(Number.isFinite(seekTime))audio.currentTime=seekTime;});
 }
 renderAlbums();renderTracks();
-notice("Select a track. Playback requires self-hosted MP3 files.");
+notice("Choose from the tracks marked Ready. More music will be added.");
 })();
