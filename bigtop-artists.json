@@ -4,7 +4,20 @@
       "name": "Blind River Johnson",
       "description": "Delta-style blues with stories of family, heartache, and the echoes life leaves behind. Visit the official channel to explore the music.",
       "channel": "https://www.youtube.com/@OfficialBlindRiverJohnson",
-      "videos": []
+      "videos": [
+        {
+          "title": "Enough To Get Me Gone (Official Audio)",
+          "url": "https://www.youtube.com/watch?v=QJUqNoHKql0"
+        },
+        {
+          "title": "Silk Devil Shuffle (Official Audio)",
+          "url": "https://www.youtube.com/watch?v=LimLRvrpO7w"
+        },
+        {
+          "title": "Tree Still Standin' (Official Visualizer)",
+          "url": "https://www.youtube.com/watch?v=qs9sp-sSrjI"
+        }
+      ]
     }
   ]
 }
