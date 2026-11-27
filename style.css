@@ -851,3 +851,45 @@ iframe{
   background:linear-gradient(90deg,rgba(6,2,4,.28),transparent 32%,transparent 68%,rgba(6,2,4,.28));
 }
 .midway-artwork { z-index:2; }
+
+/* Robust Midway overlay: the image and targets occupy ONE SVG viewBox.
+   Unlike HTML percentage hitboxes, there is no independently scaled overlay. */
+.midway-scene{
+  display:block;
+  position:relative;
+  z-index:3;
+  width:min(100vw, calc(100svh * 4 / 3));
+  height:auto;
+  aspect-ratio:4 / 3;
+  flex:0 0 auto;
+  overflow:visible;
+}
+.midway-scene > image{pointer-events:none}
+.midway-scene .midway-signs a{cursor:pointer}
+.midway-scene .midway-signs rect{
+  fill:rgba(255,175,55,0);
+  stroke:transparent;
+  stroke-width:2;
+  pointer-events:all;
+  rx:4px;
+}
+.midway-scene .midway-signs a:hover rect,
+.midway-scene .midway-signs a:focus rect{
+  fill:rgba(255,150,35,.14);
+  stroke:#ffd28c;
+  filter:drop-shadow(0 0 7px rgba(255,140,40,.65));
+}
+.midway-scene .midway-signs a:focus{outline:none}
+/* Avoid the solid-black ultrawide gutter: extend atmospheric imagery beyond
+   the foreground without distorting the image/sign relationship. */
+.midway-hero::before{
+  background-image:url("assets/images/websitebackgroundopen.png");
+  background-size:auto 100%;
+  background-repeat:repeat-x;
+  background-position:center center;
+  filter:blur(21px) brightness(.78) saturate(1.05);
+}
+.midway-hero::after{
+  background:linear-gradient(90deg,rgba(29,8,9,.5) 0%,rgba(6,2,4,.05) 33%,rgba(6,2,4,.05) 67%,rgba(29,8,9,.5) 100%);
+}
+@media(max-width:768px){.midway-scene{width:100%;}}
