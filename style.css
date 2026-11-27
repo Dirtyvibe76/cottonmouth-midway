@@ -805,12 +805,12 @@ iframe{
   box-shadow:0 0 15px rgba(255,95,25,.6);
 }
 /* These positions are proportional to the artwork, not the browser window. */
-.midway-artwork .bigtop-link   { left:79.2%;top:46.0%;width:15.2%;height:4.2%; }
-.midway-artwork .funhouse-link { left:78.8%;top:51.9%;width:16.0%;height:4.2%; }
-.midway-artwork .games-link    { left:79.1%;top:57.8%;width:15.4%;height:4.2%; }
-.midway-artwork .music-link    { left:78.0%;top:63.4%;width:17.3%;height:4.3%; }
-.midway-artwork .freakshow-link{ left:78.0%;top:69.4%;width:17.3%;height:4.3%; }
-.midway-artwork .gallery-link  { left:78.0%;top:75.5%;width:17.2%;height:4.4%; }
+.midway-artwork .bigtop-link   { left:80.7%;top:48.0%;width:15.2%;height:4.7%; }
+.midway-artwork .funhouse-link { left:80.3%;top:53.8%;width:15.5%;height:4.7%; }
+.midway-artwork .games-link    { left:80.5%;top:59.8%;width:15.3%;height:4.6%; }
+.midway-artwork .music-link    { left:79.9%;top:65.6%;width:16.0%;height:4.9%; }
+.midway-artwork .freakshow-link{ left:80.0%;top:71.6%;width:16.0%;height:4.8%; }
+.midway-artwork .gallery-link  { left:80.0%;top:77.5%;width:16.0%;height:4.8%; }
 @media(max-width:768px){
   .midway-artwork { width:100%; }
   /* Keep the native visual-sign links enabled. The text menu below remains
