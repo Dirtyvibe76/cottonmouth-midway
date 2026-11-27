@@ -698,3 +698,13 @@ iframe{
   .music-page .album-card { padding:14px; }
 }
 @media(prefers-reduced-motion:reduce) { html,body { scroll-behavior:auto; } }
+
+/* Mobile navigation: artwork hotspots are hidden at <=768px */
+.mobile-midway-nav { display:none; }
+@media(max-width:768px) {
+  .midway-hero { min-height:100svh; flex-direction:column; justify-content:flex-end; }
+  .midway-image { object-fit:contain; }
+  .mobile-midway-nav { position:relative; z-index:6; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); width:min(94%,500px); gap:9px; margin:0 auto 24px; padding:12px; background:rgba(0,0,0,.87); border:1px solid #b74b22; border-radius:8px; }
+  .mobile-midway-nav a { display:flex; justify-content:center; align-items:center; min-height:44px; padding:9px 6px; text-align:center; color:#ffda9b; background:#471009; border:1px solid #a64d2d; border-radius:4px; text-decoration:none; font-weight:bold; }
+  .mobile-midway-nav a:hover,.mobile-midway-nav a:focus-visible { background:#892214; outline:2px solid #ffcc66; }
+}
