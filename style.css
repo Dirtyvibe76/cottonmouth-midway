@@ -593,7 +593,6 @@ margin-top:30px;
 font-size:2.2rem;
 }
 
-```
 .tagline{
     font-size:1.1rem;
 }
@@ -661,6 +660,41 @@ iframe{
 .album-panel-header h2{
     font-size:2rem;
 }
-```
 
 }
+
+/* Music Tent: usable album selection on desktop and mobile */
+.music-page, .music-page * { box-sizing: border-box; }
+.music-page { width:100%; }
+.music-page > .subpage-card { width:min(100%, 900px); }
+.music-page .featured-track,
+.music-page .album-wall,
+.music-page .album-panel,
+.music-page .latest-music { width:min(100%, 1100px); margin-inline:auto; }
+.music-page .album-panel { max-width:1400px; scroll-margin-top:24px; }
+.music-page .music-grid { width:100%; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:20px; }
+.music-page .album-card { min-width:0; padding:18px; }
+.music-page .album-card h2 { font-size:clamp(1.2rem, 3vw, 1.7rem); overflow-wrap:anywhere; }
+.music-page iframe { display:block; width:100%; aspect-ratio:16/9; height:auto; }
+.music-page .album-featured { width:100%; }
+.album-choices { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin:22px auto 8px; }
+.album-open-button { padding:14px 20px; min-height:48px; background:#781313; color:#fff1df; border:2px solid #e39456; font:700 1rem Georgia,serif; cursor:pointer; border-radius:5px; }
+.album-open-button:hover, .album-open-button:focus-visible, .album-open-button[aria-expanded="true"] { background:#ad2b16; outline:2px solid #ffd27a; outline-offset:2px; }
+.album-hint { font-size:.95rem; font-weight:normal !important; }
+.album-wall-image { pointer-events:none; }
+.latest-music { text-align:center; padding:24px; background:rgba(0,0,0,.78); border:2px solid rgba(255,90,20,.6); }
+.latest-music h2 { color:#ffb14d; margin-top:0; }
+.latest-music p { line-height:1.55; }
+.music-page .album-track-list { padding-left:24px; }
+.music-page .album-track-list a:focus-visible, .music-page .back-button:focus-visible, .music-page .listen-button:focus-visible, .music-page .close-album:focus-visible { outline:3px solid #ffcc66; outline-offset:3px; }
+@media(max-width:768px) {
+  .subpage-wrap.music-page { padding:18px 12px 40px; gap:20px; }
+  .music-page .subpage-card { padding:22px 16px; }
+  .music-page .album-wall, .music-page .album-panel { padding:16px 12px; }
+  .music-page .album-wall-image { height:auto; aspect-ratio:900/420; background-size:cover; }
+  .album-choices { flex-direction:column; }
+  .album-open-button { width:100%; }
+  .music-page .music-grid { margin-top:18px; }
+  .music-page .album-card { padding:14px; }
+}
+@media(prefers-reduced-motion:reduce) { html,body { scroll-behavior:auto; } }
