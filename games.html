@@ -1,29 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Games - Cottonmouth Clown</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Play free carnival mini-games at Cottonmouth Clown's Midway: Balloon Pop, Whack-a-Clown, and the High Striker.">
+<title>Games Tent — Cottonmouth Clown</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="games.css?v=20261127-1">
 </head>
-
-<body class="subpage">
-
-<div class="projector"></div>
-
-<main class="subpage-wrap">
-    <a href="index.html" class="back-button">← BACK TO THE MIDWAY</a>
-
-    <section class="subpage-card">
-        <h1>🎯 CARNIVAL GAMES</h1>
-        <p class="subpage-tagline">Step right up. Everybody wins something weird.</p>
-
-        <p>
-            Challenges, fan interaction, hidden clicks, Easter eggs,
-            and whatever games the Midway decides to rig next.
-        </p>
-    </section>
+<body class="subpage games-tent-bg">
+<div class="projector" aria-hidden="true"></div>
+<main class="subpage-wrap games-page">
+<a class="back-button" href="index.html">← BACK TO THE MIDWAY</a>
+<header class="subpage-card games-heading">
+<p class="games-eyebrow">COTTONMOUTH CLOWN PRESENTS</p>
+<h1>🎯 THE GAMES TENT 🎪</h1>
+<p class="subpage-tagline">Step right up. The games are free. The laughter isn't guaranteed.</p>
+<p>Three quick carnival challenges. No accounts, no payments, no real prizes. Just bragging rights under the big top.</p>
+</header>
+<nav class="game-directory" aria-label="Choose a carnival game">
+<a href="#balloonGame">🎈 Balloon Pop</a>
+<a href="#clownGame">🤡 Whack-a-Clown</a>
+<a href="#strikerGame">🔔 High Striker</a>
+</nav>
+<section id="balloonGame" class="game-booth" aria-labelledby="balloonHeading">
+<div class="game-booth-header"><div><p class="games-eyebrow">BOOTH 01</p><h2 id="balloonHeading">🎈 BALLOON POP</h2><p>Pop as many balloons as you can in 20 seconds. Watch for the golden balloons!</p></div>
+<div class="game-readout"><span>TIME <strong id="balloonTime">20</strong>s</span><span>SCORE <strong id="balloonScore">0</strong></span><span>BEST <strong id="balloonBest">0</strong></span></div></div>
+<div id="balloonBoard" class="balloon-board" role="group" aria-label="Balloon targets"></div>
+<div class="game-actions"><button id="balloonStart" type="button">🎟 START ROUND</button><p class="game-message" id="balloonMessage" role="status" aria-live="polite">Hit Start to open the booth.</p></div>
+</section>
+<section id="clownGame" class="game-booth" aria-labelledby="clownHeading">
+<div class="game-booth-header"><div><p class="games-eyebrow">BOOTH 02</p><h2 id="clownHeading">🤡 WHACK-A-CLOWN</h2><p>Catch the clown popping out of the boxes. Twenty seconds. One point per hit.</p></div>
+<div class="game-readout"><span>TIME <strong id="clownTime">20</strong>s</span><span>SCORE <strong id="clownScore">0</strong></span><span>BEST <strong id="clownBest">0</strong></span></div></div>
+<div id="clownBoard" class="clown-board" role="group" aria-label="Whack-a-clown boxes"></div>
+<div class="game-actions"><button id="clownStart" type="button">🎟 START ROUND</button><p class="game-message" id="clownMessage" role="status" aria-live="polite">The clowns are waiting.</p></div>
+</section>
+<section id="strikerGame" class="game-booth" aria-labelledby="strikerHeading">
+<div class="game-booth-header"><div><p class="games-eyebrow">BOOTH 03</p><h2 id="strikerHeading">🔔 HIGH STRIKER</h2><p>Watch the moving power bar. Stop it when the marker hits the golden sweet spot. Three swings per round!</p></div>
+<div class="game-readout"><span>SWINGS <strong id="strikerSwings">3</strong></span><span>TOTAL <strong id="strikerScore">0</strong></span><span>BEST <strong id="strikerBest">0</strong></span></div></div>
+<div class="striker-stage">
+<div class="striker-bell" aria-hidden="true">🔔</div>
+<div class="striker-meter" id="strikerMeter" role="img" aria-label="Power bar with a center golden sweet spot">
+<div class="striker-perfect" aria-hidden="true"></div><div id="strikerMarker" class="striker-marker" aria-hidden="true"></div>
+</div>
+<p id="strikerPower" class="striker-power">Ready for your first swing?</p>
+</div>
+<div class="game-actions"><button id="strikerStart" type="button">🎟 START ROUND</button><button id="strikerHit" type="button" disabled>🔨 SWING!</button><p class="game-message" id="strikerMessage" role="status" aria-live="polite">Hit Start, then time your swing.</p></div>
+</section>
+<footer class="games-footer">All games are free, for entertainment only. Best scores are stored only in this browser.<br>© 2026 Broken Carousel Productions LLC · Cottonmouth Clown</footer>
 </main>
-
+<script defer src="games.js?v=20261127-1"></script>
 </body>
 </html>
