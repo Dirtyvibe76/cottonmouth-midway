@@ -16,4 +16,4 @@ window.MIDWAY_CATALOG = [
     ["family-in-the-fog","Family in the Fog"],["funhouse-mirror","Funhouse Mirror"],
     ["everythings-fine","Everything’s Fine"]
   ]}
-].map(album=>({...album,tracks:album.tracks.map(([id,title])=>({id,title,album:album.title,src:'assets/music/'+id+'.mp3'}))}));
+].map(album=>({...album,tracks:album.tracks.map(([id,title])=>({id,title,album:album.title,src:'assets/music/'+id+'.mp3',published:['carnival-of-chaos','midway-riot','open-the-gates'].includes(id)}))}));
