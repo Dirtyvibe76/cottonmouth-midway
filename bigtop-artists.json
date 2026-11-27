@@ -1,3 +1,10 @@
 {
-  "artists": []
+  "artists": [
+    {
+      "name": "Blind River Johnson",
+      "description": "Delta-style blues with stories of family, heartache, and the echoes life leaves behind. Visit the official channel to explore the music.",
+      "channel": "https://www.youtube.com/@OfficialBlindRiverJohnson",
+      "videos": []
+    }
+  ]
 }
