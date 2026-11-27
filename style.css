@@ -818,3 +818,36 @@ iframe{
   .midway-artwork .sign-link {display:block;}
   .midway-hero {min-height:100svh;}
 }
+
+/* Ultrawide backdrop: the sharp 4:3 artwork must keep its exact aspect ratio
+   for sign click targets; fill the unused horizontal space with the same
+   carnival image as a blurred, brightened, full-bleed atmospheric extension. */
+.midway-hero {
+  background-color:#090406;
+  isolation:isolate;
+}
+.midway-hero::before {
+  content:"";
+  position:absolute;
+  inset:-28px;
+  width:auto;
+  height:auto;
+  z-index:0;
+  pointer-events:none;
+  background-image:url("assets/images/websitebackgroundopen.png");
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:cover;
+  filter:blur(24px) brightness(.72) saturate(1.15);
+  transform:none;
+  opacity:1;
+}
+.midway-hero::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(6,2,4,.28),transparent 32%,transparent 68%,rgba(6,2,4,.28));
+}
+.midway-artwork { z-index:2; }
