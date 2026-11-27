@@ -1,0 +1,54 @@
+/* The Midway Games Tent — responsive, touch-first carnival booths */
+.games-tent-bg{background:linear-gradient(rgba(7,2,4,.63),rgba(12,3,5,.92)),url("assets/images/websitebackgroundopen.png") center/cover fixed no-repeat}
+.games-page,.games-page *{box-sizing:border-box}
+.games-page{width:100%;max-width:100%;justify-content:flex-start;gap:25px;padding:32px 18px 45px}
+.games-heading{width:min(100%,910px)}
+.games-eyebrow{font-weight:700;letter-spacing:.17em;color:#f1bc6e;font-size:.78rem}
+.games-page h2{color:#ffb768;text-shadow:0 0 12px #732b1a;margin:8px 0;font-size:clamp(1.45rem,3vw,2rem)}
+.game-directory{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;width:min(100%,1080px)}
+.game-directory a{padding:12px 18px;min-height:46px;display:flex;align-items:center;color:#ffe7bc;background:#501714;border:1px solid #c4773a;border-radius:6px;text-decoration:none;font-weight:700}
+.game-directory a:hover,.game-directory a:focus-visible{background:#90301c;outline:2px solid #ffcd73}
+.game-booth{width:min(100%,1080px);padding:25px;border:2px solid #a95731;background:linear-gradient(145deg,rgba(30,8,10,.96),rgba(8,4,7,.96));border-radius:10px;box-shadow:0 0 26px rgba(175,50,22,.25);scroll-margin-top:20px}
+.game-booth-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.game-booth-header>div:first-child{flex:1 1 300px}
+.game-booth-header p{line-height:1.55;color:#e9c7ae}
+.game-readout{display:flex;flex-wrap:wrap;gap:12px}
+.game-readout span{display:grid;min-width:77px;gap:4px;padding:10px;background:#310f13;border:1px solid #9c4827;border-radius:4px;color:#e6b98f;text-align:center;font-size:.78rem;letter-spacing:.08em}
+.game-readout strong{font-size:1.55rem;color:#ffe1a5;font-variant-numeric:tabular-nums}
+.game-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:18px}
+.game-actions button{border:2px solid #efb465;color:#fff3df;background:#852719;border-radius:5px;padding:13px 20px;min-height:48px;cursor:pointer;font:bold 1rem Georgia,serif}
+.game-actions button:hover,.game-actions button:focus-visible{background:#bd4724;outline:2px solid #ffd584;outline-offset:2px}
+.game-actions button:disabled{opacity:.45;cursor:default}
+.game-message{flex:1 1 220px;color:#ffd390;font-size:1rem;line-height:1.4}
+.balloon-board{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin-top:19px;padding:22px;border:4px double #754c22;border-radius:9px;background:repeating-linear-gradient(0deg,#271114 0 26px,#361819 27px 30px)}
+.balloon-target{position:relative;aspect-ratio:1/1.15;min-height:55px;border:0;border-radius:50% 50% 46% 46%;background:radial-gradient(circle at 37% 25%,#ffb1a2 2%,#d62938 35%,#870916 85%);color:#f9d8c7;font-size:clamp(1.8rem,4vw,3rem);cursor:pointer;box-shadow:inset -9px -8px 12px rgba(0,0,0,.35),0 8px 10px rgba(0,0,0,.36);transition:transform .09s ease}
+.balloon-target:nth-child(3n){background:radial-gradient(circle at 35% 25%,#9ac5ff,#355db0 65%,#14295b)}
+.balloon-target:nth-child(4n){background:radial-gradient(circle at 35% 25%,#ffc879,#ed8726 58%,#984014)}
+.balloon-target.golden{background:radial-gradient(circle at 35% 25%,#fff7b8,#edbd42 55%,#99620a);color:#66410a}
+.balloon-target:disabled:not(.popped){cursor:default;filter:brightness(.65)}
+.balloon-target.popped{transform:scale(.35);opacity:.25;border-radius:50%;box-shadow:none;cursor:default}
+.balloon-target:hover:not(:disabled),.balloon-target:focus-visible{outline:3px solid #ffe2a0;outline-offset:3px;transform:scale(1.04)}
+.clown-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;width:min(100%,600px);margin:22px auto;padding:20px;background:repeating-linear-gradient(90deg,#251117,#301619 40px,#251117 80px);border:4px double #a15b33;border-radius:10px}
+.clown-hole{aspect-ratio:1.45;min-height:70px;border:3px solid #7b452b;border-radius:45%;background:radial-gradient(ellipse at center,#10070a 12%,#391513 55%,#80401e 100%);font-size:clamp(2rem,7vw,4rem);cursor:pointer;transition:background .08s}
+.clown-hole.active{background:radial-gradient(ellipse,#ad482a,#47141c 70%)}
+.clown-hole:focus-visible{outline:3px solid #ffcf72}
+.clown-hole:disabled{cursor:default}
+.striker-stage{text-align:center;margin:22px auto;max-width:700px;padding:18px;background:linear-gradient(90deg,#1d090b,#431a15,#1d090b);border:3px double #95542c;border-radius:10px}
+.striker-bell{font-size:3.8rem;filter:drop-shadow(0 0 9px #db8a31)}
+.striker-meter{height:55px;position:relative;border:3px solid #d18b45;border-radius:7px;background:linear-gradient(90deg,#6b171c,#d64727 30%,#edb449 45%,#fbe9a1 50%,#edb449 55%,#d64727 70%,#6b171c);margin:14px 10px}
+.striker-perfect{position:absolute;inset:0 auto 0 45%;width:10%;border:2px solid #fff0b0;background:rgba(255,230,125,.23)}
+.striker-marker{position:absolute;top:-13px;bottom:-13px;left:0;width:6px;border-radius:5px;background:#fff;box-shadow:0 0 15px #fff,0 0 25px #edc263;transform:translateX(-50%)}
+.striker-power{color:#ffe0a4;font-size:1.12rem;font-weight:700;min-height:1.5em}
+.games-footer{text-align:center;font-size:.87rem;line-height:1.6;color:#d7aea3;margin:7px auto 20px}
+@media(max-width:680px){
+ .games-page{padding:20px 10px 38px}
+ .games-heading{padding:22px 14px}
+ .game-booth{padding:15px}
+ .balloon-board{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:12px}
+ .game-readout{width:100%;justify-content:space-around}
+ .game-readout span{flex:1;min-width:0}
+ .clown-board{gap:8px;padding:12px}
+ .game-directory a{flex:1 1 170px;justify-content:center}
+}
+@media(max-width:380px){.balloon-board{gap:7px;padding:8px}.balloon-target{min-height:44px}.game-actions button{width:100%}}
+@media(prefers-reduced-motion:reduce){.balloon-target{transition:none}}
