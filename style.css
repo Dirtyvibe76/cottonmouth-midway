@@ -893,3 +893,25 @@ iframe{
   background:linear-gradient(90deg,rgba(29,8,9,.5) 0%,rgba(6,2,4,.05) 33%,rgba(6,2,4,.05) 67%,rgba(29,8,9,.5) 100%);
 }
 @media(max-width:768px){.midway-scene{width:100%;}}
+
+
+/* During the cinematic opening, keep the fading gate ABOVE the already-live
+   Midway, rather than leaving its old full-height layout slot in the document. */
+body.gate-entering #landing {
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100svh;
+  z-index:30;
+}
+body.gate-entering #midway {
+  position:relative;
+  z-index:1;
+}
+#gateFlash.show {
+  z-index:40;
+}
+@media(prefers-reduced-motion:reduce){
+  body.gate-entering #landing.fade-out { animation:none; opacity:0; pointer-events:none; }
+  #gateFlash.show { animation:none; }
+}
