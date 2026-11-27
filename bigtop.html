@@ -2,29 +2,63 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Big Top - Cottonmouth Clown</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100808">
+<meta name="description" content="Step into the Big Top: guest artists, music videos and independent channels featured by Cottonmouth Clown.">
+<title>The Big Top — Guest Artists | Cottonmouth Clown</title>
 <link rel="stylesheet" href="style.css">
 </head>
+<body class="subpage bigtop-bg">
+<div class="projector" aria-hidden="true"></div>
+<main class="subpage-wrap bigtop-page">
+  <a href="index.html" class="back-button">← RETURN TO THE MIDWAY</a>
+  <header class="subpage-card bigtop-heading">
+    <p class="bigtop-kicker">COTTONMOUTH CLOWN PRESENTS</p>
+    <h1>🎪 THE BIG TOP 🎪</h1>
+    <p class="subpage-tagline">The spotlight ain't just for Cottonmouth.</p>
+    <p>Step inside and discover independent artists from beyond the Midway. Hear their music, watch their videos, then visit their channels and show 'em some love.</p>
+  </header>
 
-<body class="subpage">
+  <section class="bigtop-stage" aria-labelledby="stageHeading">
+    <div class="bigtop-stage-info">
+      <p class="bigtop-kicker">THE CENTER RING</p>
+      <h2 id="stageHeading">Guest Artist Showcase</h2>
+      <h3 id="stageArtist">The stage is being set…</h3>
+      <p id="stageSong">Choose a performance from the artist cards below.</p>
+      <p id="stageDescription" class="bigtop-stage-description">Every featured artist gets a direct link to their own channel. The music belongs to its creator.</p>
+      <div class="bigtop-stage-links">
+        <a id="stageChannel" class="listen-button hidden" target="_blank" rel="noopener noreferrer">Visit Artist's Channel ↗</a>
+        <a id="stageVideo" class="bigtop-outline-button hidden" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
+      </div>
+    </div>
+    <div class="bigtop-video" id="videoContainer">
+      <div class="bigtop-video-placeholder" id="stagePlaceholder">
+        <span aria-hidden="true">🎤</span>
+        <strong>THE NEXT ACT IS COMING</strong>
+        <p>The spotlight is ready. The guest artist lineup is being assembled.</p>
+      </div>
+    </div>
+  </section>
 
-<div class="projector"></div>
+  <section class="bigtop-lineup" aria-labelledby="lineupHeading">
+    <div class="bigtop-lineup-title">
+      <div><p class="bigtop-kicker">BEYOND THE MIDWAY</p><h2 id="lineupHeading">THE GUEST LINEUP</h2></div>
+      <p id="artistCount" class="bigtop-count" aria-live="polite"></p>
+    </div>
+    <div class="bigtop-tools">
+      <label for="artistSearch">Find an artist or a song</label>
+      <input id="artistSearch" type="search" placeholder="Search the lineup…" autocomplete="off">
+    </div>
+    <div id="artistLineup" class="bigtop-artist-grid" aria-live="polite">
+      <p class="bigtop-empty">Checking the lineup…</p>
+    </div>
+  </section>
 
-<main class="subpage-wrap">
-    <a href="index.html" class="back-button">← BACK TO THE MIDWAY</a>
-
-    <section class="subpage-card">
-        <h1>🎪 BIG TOP</h1>
-        <p class="subpage-tagline">Under the Big Top, Juggalos Reign.</p>
-
-        <p>
-            Welcome to the center ring of Cottonmouth Clown.
-            This is where the main show lives: albums, announcements,
-            featured drops, and whatever crawls out from under the tent.
-        </p>
-    </section>
+  <footer class="bigtop-footer">
+    <p>Each performance plays through YouTube's official embedded player. Subscribe and support the original artist on their channel.</p>
+    <p>© 2026 Broken Carousel Productions LLC · Cottonmouth Clown</p>
+  </footer>
 </main>
-
+<script defer src="bigtop.js"></script>
 </body>
 </html>
