@@ -127,7 +127,7 @@ async function load() {
         videoContainer.replaceChildren(play);
       }else{
         const container=document.createElement("div");container.className="bigtop-video-placeholder";
-        container.append(textNode("span","","🎙️"),textNode("strong","","DISCOVER BLIND RIVER JOHNSON"));
+        container.append(textNode("span","","🎙️"),textNode("strong","","DISCOVER "+first.name.toUpperCase()));
         const link=document.createElement("a");link.href=first.channel;link.target="_blank";link.rel="noopener noreferrer";link.className="listen-button";link.textContent="LISTEN ON THEIR CHANNEL ↗";
         container.append(link);videoContainer.replaceChildren(container);
       }
