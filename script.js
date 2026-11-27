@@ -1,34 +1,51 @@
-const enterButton = document.getElementById("enterButton");
-const landing = document.getElementById("landing");
-const midway = document.getElementById("midway");
-const gateFlash = document.getElementById("gateFlash");
+// The landing/entry sequence must never leave an invisible full-height landing
+// in front of (or above) the Midway. Browsers can defer timers when a tab is
+// backgrounded, so all critical visibility changes happen in the click handler.
+(() => {
+    const enterButton = document.getElementById("enterButton");
+    const landing = document.getElementById("landing");
+    const midway = document.getElementById("midway");
+    const gateFlash = document.getElementById("gateFlash");
+    if (!enterButton || !landing || !midway || !gateFlash) return;
 
-const gateAudio = new Audio("assets/audio/openthegates.wav");
+    const gateAudio = new Audio("assets/audio/openthegates.wav");
+    const ambienceAudio = new Audio("assets/audio/background.wav");
+    ambienceAudio.loop = true;
+    ambienceAudio.volume = 0.25;
+    let entered = false;
+    let flashTimer = null;
 
-const ambienceAudio = new Audio("assets/audio/background.wav");
-ambienceAudio.loop = true;
-ambienceAudio.volume = 0.25;
-
-enterButton.addEventListener("click", () => {
-    gateAudio.currentTime = 0;
-    gateAudio.play().catch(() => {});
-
-    landing.classList.add("fade-out");
-
-    setTimeout(() => {
-        gateFlash.textContent = "OPEN THE GATES!";
-        gateFlash.classList.add("show");
-    }, 600);
-
-    setTimeout(() => {
+    function revealMidway() {
+        entered = true;
+        landing.classList.remove("fade-out");
         landing.style.display = "none";
-        gateFlash.textContent = "WELCOME TO THE MIDWAY";
-    }, 1700);
-
-    setTimeout(() => {
-        gateFlash.classList.remove("show");
         midway.classList.remove("hidden");
+        window.scrollTo({top: 0, left: 0, behavior: "instant"});
+    }
+
+    enterButton.addEventListener("click", () => {
+        if (entered) return;
+        revealMidway();
+        gateAudio.currentTime = 0;
+        gateAudio.play().catch(() => {});
         ambienceAudio.play().catch(() => {});
-        window.scrollTo(0, 0);
-    }, 3200);
-});
+        gateFlash.textContent = "WELCOME TO THE MIDWAY";
+        gateFlash.classList.add("show");
+        clearTimeout(flashTimer);
+        flashTimer = setTimeout(() => gateFlash.classList.remove("show"), 950);
+    });
+
+    // Chrome's back/forward cache can restore a partially transitioned page.
+    // Repair any such state synchronously rather than leaving a blank screen.
+    window.addEventListener("pageshow", () => {
+        if (entered || landing.style.display === "none") {
+            revealMidway();
+            gateFlash.classList.remove("show");
+        } else {
+            landing.style.display = "";
+            landing.classList.remove("fade-out");
+            midway.classList.add("hidden");
+            gateFlash.classList.remove("show");
+        }
+    });
+})();
